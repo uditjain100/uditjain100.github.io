@@ -32,7 +32,7 @@ p {
 }
 
 #scrollbtn:hover {
-	background-color: #0f0;
+	background-color: #053254;
 	transition: 0.8s;
 	transform: scale(1.25);
 }
@@ -1248,6 +1248,5 @@ address a img {
 	width: 100%;
 	color: white;
 	text-align: center;
-	background-color: #053254;
 	font-family: "Montserrat";
 }

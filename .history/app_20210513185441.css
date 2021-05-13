@@ -158,6 +158,10 @@ p {
 
 /* ********************************* About Section */
 
+#about-section {
+	background-color: #053205;
+}
+
 #about-heading {
 	font-family: "Montserrat";
 	text-align: center;

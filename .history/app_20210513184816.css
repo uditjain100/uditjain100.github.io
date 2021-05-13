@@ -112,7 +112,7 @@ p {
 #navlist li:hover {
 	transition: 0.5s;
 	transform: scale(1.05);
-	background-color: crimson;
+	background-color: #053254;
 }
 
 @media (max-width: 993px) {
@@ -1248,6 +1248,5 @@ address a img {
 	width: 100%;
 	color: white;
 	text-align: center;
-	background-color: #053254;
 	font-family: "Montserrat";
 }

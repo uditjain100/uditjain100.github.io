@@ -68,8 +68,8 @@ p {
 /* **************************************** Nav Section */
 
 #navbar.scrolled {
-	background-image: url("./images/navbg.jpeg") !important;
-	transition: background-image 1s linear;
+	background-image: image("./images/3.jpg") !important;
+	transition: background-color 200ms linear;
 }
 
 #navtitle {
@@ -1248,6 +1248,5 @@ address a img {
 	width: 100%;
 	color: white;
 	text-align: center;
-	background-color: #053254;
 	font-family: "Montserrat";
 }
