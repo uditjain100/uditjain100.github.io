@@ -1,0 +1,15 @@
+#arrowleft {
+	margin: 100px;
+	height: 20px;
+	width: 100px;
+	background-color: black;
+	transform: rotate(-45deg);
+}
+
+#arrowright {
+	margin: 100px;
+	height: 20px;
+	width: 100px;
+	background-color: black;
+	transform: rotate(-45deg);
+}

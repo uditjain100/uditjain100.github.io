@@ -1,19 +1,15 @@
-function add(a, b = 2) {
-	return a + b;
-}
-
-const app = (a, b = 2) => a + b;
-
 // *********************** Common Section
 
-$(document).scroll(function () {
-	var $nav = $("#navbar");
-	$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+$(function () {
+	$(document).scroll(function () {
+		$("#navbar").toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+	});
 });
 
-$(document).scroll(function () {
-	var $nav = $("#scrollbtn");
-	$nav.toggleClass("see", $(this).scrollTop() > $nav.height());
+$(function () {
+	$(document).scroll(function () {
+		$("#navbar").toggleClass("see", $(this).scrollTop() > $nav.height());
+	});
 });
 
 // *********************** About Section

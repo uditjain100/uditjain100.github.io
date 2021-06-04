@@ -1,8 +1,12 @@
-function add(a, b = 2) {
-	return a + b;
-}
+const map = {
+	add() {
+		console.log("Hello");
+	},
 
-const app = (a, b = 2) => a + b;
+	sum: () => {
+		console.log("hey");
+	},
+};
 
 // *********************** Common Section
 

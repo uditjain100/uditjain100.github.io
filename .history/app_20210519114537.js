@@ -1,9 +1,3 @@
-function add(a, b = 2) {
-	return a + b;
-}
-
-const app = (a, b = 2) => a + b;
-
 // *********************** Common Section
 
 $(document).scroll(function () {

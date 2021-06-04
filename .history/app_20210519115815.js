@@ -1,8 +1,17 @@
-function add(a, b = 2) {
-	return a + b;
-}
+const map = {
+	value: 25,
 
-const app = (a, b = 2) => a + b;
+	add() {
+		console.log(this.value);
+	},
+
+	diff : function (() => {
+		console.log("hey");
+		console.log(this.value);
+}) {
+	
+	},
+};
 
 // *********************** Common Section
 

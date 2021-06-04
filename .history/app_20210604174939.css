@@ -46,12 +46,6 @@ p {
 	width: 40px;
 }
 
-h4 .rounded-pill {
-	width: 90px;
-	height: 5px;
-	background-color: black;
-}
-
 ::-webkit-scrollbar {
 	width: 10px;
 }

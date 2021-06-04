@@ -46,7 +46,7 @@ p {
 	width: 40px;
 }
 
-h4 .rounded-pill {
+#bars {
 	width: 90px;
 	height: 5px;
 	background-color: black;

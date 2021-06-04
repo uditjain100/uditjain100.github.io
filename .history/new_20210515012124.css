@@ -1,0 +1,23 @@
+span {
+	display: flex;
+	align-items: initial;
+	flex-direction: row;
+}
+
+#arrowleft {
+	border-radius: 20%;
+	margin-top: 100px;
+	height: 20px;
+	width: 100px;
+	background-color: black;
+	transform: rotate(-45deg);
+}
+
+#arrowright {
+	border-radius: 20%;
+	margin-top: 100px;
+	height: 20px;
+	width: 100px;
+	background-color: black;
+	transform: rotate(45deg);
+}

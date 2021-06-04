@@ -1,8 +1,10 @@
-function add(a, b = 2) {
-	return a + b;
+function add() {
+	console.log("Hello");
 }
 
-const app = (a, b = 2) => a + b;
+const sum = () => {
+	console.log("hey");
+};
 
 // *********************** Common Section
 
