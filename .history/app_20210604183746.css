@@ -330,8 +330,7 @@ h4 .rounded-pill {
 	font-weight: 600;
 }
 
-#volunteerDetails h2,
-#organiserDetails h2 {
+#activityTitle {
 	font-size: 50px;
 	font-weight: 600;
 }
@@ -469,12 +468,11 @@ img.rounded-pill {
 	padding: 20px;
 }
 
-#androiddetails div h5,
-#webdetails div h5 {
+#androiddetails #title,
+#webdetails #title {
 	font-family: "Montserrat";
 	font-size: 25px;
 	text-align: center;
-	margin-bottom: 25px;
 }
 
 #androiddetails div #text,
