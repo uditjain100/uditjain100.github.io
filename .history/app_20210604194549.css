@@ -955,7 +955,7 @@ img.rounded-pill {
 	animation: transitionIn 1s;
 }
 
-#otherBasket div {
+#otherdetails {
 	background-color: dodgerblue;
 	border-top: 1px black solid;
 	border-bottom: 1px black solid;
@@ -969,11 +969,11 @@ img.rounded-pill {
 	transition: 0.3s;
 }
 
-#otherBasket div:hover {
+#otherdetails:hover {
 	transform: scale(1.05);
 }
 
-#otherBasket div div {
+#otherdetails div {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	min-width: 160px;
@@ -982,7 +982,7 @@ img.rounded-pill {
 	align-items: center;
 }
 
-#otherBasket div h4 {
+#otherdetails #questions {
 	text-align: center;
 	font-weight: 500;
 	margin-top: 10px;
@@ -990,7 +990,7 @@ img.rounded-pill {
 	font-family: "Montserrat";
 }
 
-#otherBasket div ul li {
+#otherdetails #answers li {
 	background-color: dodgerblue;
 	text-align: center;
 	font-weight: 400;

@@ -923,14 +923,12 @@ img.rounded-pill {
 	transition: 0.5s;
 }
 
-#webdbs div:hover,
-#androiddbs div:hover {
+#dbsdetails:hover {
 	transform: scale(1.05);
 	background-color: blue;
 }
 
-#webdbs div img,
-#androiddbs div img {
+#dbsdetails img {
 	border: 2px black solid;
 	border-radius: 50%;
 	background-color: white;
@@ -940,8 +938,7 @@ img.rounded-pill {
 	height: 100px;
 }
 
-#webdbs div h5,
-#androiddbs div h5 {
+#dbsdetails h5 {
 	font-family: "Nunito";
 	padding: 10px;
 	margin: 10px;
@@ -955,7 +952,7 @@ img.rounded-pill {
 	animation: transitionIn 1s;
 }
 
-#otherBasket div {
+#otherdetails {
 	background-color: dodgerblue;
 	border-top: 1px black solid;
 	border-bottom: 1px black solid;
@@ -969,11 +966,11 @@ img.rounded-pill {
 	transition: 0.3s;
 }
 
-#otherBasket div:hover {
+#otherdetails:hover {
 	transform: scale(1.05);
 }
 
-#otherBasket div div {
+#otherdetails div {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	min-width: 160px;
@@ -982,7 +979,7 @@ img.rounded-pill {
 	align-items: center;
 }
 
-#otherBasket div h4 {
+#otherdetails #questions {
 	text-align: center;
 	font-weight: 500;
 	margin-top: 10px;
@@ -990,7 +987,7 @@ img.rounded-pill {
 	font-family: "Montserrat";
 }
 
-#otherBasket div ul li {
+#otherdetails #answers li {
 	background-color: dodgerblue;
 	text-align: center;
 	font-weight: 400;
