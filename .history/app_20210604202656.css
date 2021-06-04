@@ -1098,8 +1098,8 @@ img.rounded-pill {
 	text-decoration: none;
 	border-bottom: 2px white solid;
 	border-top: 2px white solid;
-	border-top-left-radius: 30%;
-	border-bottom-right-radius: 30%;
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
 	transition: 0.5s;
 	font-family: "Montserrat";
 	color: white;
