@@ -273,6 +273,10 @@ h4 .rounded-pill {
 	padding-bottom: 50px;
 }
 
+#activitiesBasketData .card {
+	border: none;
+}
+
 #highschoolDetails {
 	margin-bottom: 100px;
 	display: flex;
@@ -305,6 +309,7 @@ h4 .rounded-pill {
 #organiserDetails,
 #volunteerDetails {
 	font-family: "Ubuntu";
+	border-bottom: 1px black solid;
 }
 
 #highschoolLeft,
@@ -313,7 +318,9 @@ h4 .rounded-pill {
 	min-width: 320px;
 	text-align: right;
 	font-family: "Spartan";
+	border: none;
 	border-right: 1px black solid;
+	border-bottom: 0.2px black solid;
 }
 
 #highschoolName,
@@ -342,7 +349,9 @@ h4 .rounded-pill {
 	min-width: 320px;
 	text-align: left;
 	font-family: "Spartan";
+	border: none;
 	border-left: 1px black solid;
+	border-bottom: 0.2px black solid;
 }
 
 img.rounded-pill {
@@ -363,7 +372,8 @@ img.rounded-pill {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-right: 1px black solid;
+	border: none;
+	/* border-right: 1px black solid; */
 }
 
 #introDetailsRight {
@@ -371,13 +381,15 @@ img.rounded-pill {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: none;
+	border-left: 1px black solid;
 }
 
 #aboutProfileImage {
 	width: 280px;
-	height: 280px;
+	height: 350px;
 	border-radius: 2%;
-	border: 1px white solid;
+	/* border: 1px white solid; */
 	box-shadow: 2px 2px 2px 2px;
 }
 
