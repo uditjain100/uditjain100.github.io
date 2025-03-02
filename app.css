@@ -651,7 +651,7 @@ img.rounded-pill {
   align-items: center;
 }
 
-#androiddetails,
+/* #androiddetails,
 #webdetails {
   background-color: #222;
   height: 55vh;
@@ -717,7 +717,89 @@ img.rounded-pill {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+} */
+
+
+#parkinsondetails,
+#truthlensdetails,
+#yelpcampdetails {
+  background-color: #222;
+  height: 65vh;
+  padding: 5px;
+  min-width: 320px;
+  border: none;
+  margin-bottom: 150px;
+  transition: 0.5s;
+  border-bottom-left-radius: 20%;
+  border-bottom: 2px blue solid;
+  border-right: 2px blue solid;
+  display: flex;
+  align-items: center;
 }
+
+@media (max-width: 1200px) {
+
+  #parkinsondetails,
+  #truthlensdetails,
+  #yelpcampdetails {
+    height: 63vh;
+  }
+}
+
+#parkinsondetails:hover,
+#truthlensdetails:hover,
+#yelpcampdetails:hover {
+  transform: scale(1.05);
+  background-color: blue;
+  border-bottom: 2px white solid;
+  border-right: 2px white solid;
+}
+
+#parkinsondetails div,
+#truthlensdetails div,
+#yelpcampdetails div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#parkinsondetails .project-initial,
+#truthlensdetails .project-initial,
+#yelpcampdetails .project-initial {
+  background-color: blue;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+#parkinsondetails div h5,
+#truthlensdetails div h5,
+#yelpcampdetails div h5 {
+  font-family: "Montserrat";
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#parkinsondetails div #text,
+#truthlensdetails div #text,
+#yelpcampdetails div #text {
+  font-family: "Ubuntu";
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 
 /* ************************************* Skills Section */
 
