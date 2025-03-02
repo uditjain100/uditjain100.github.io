@@ -158,12 +158,14 @@
       </nav>
     </header>
 
+    <!-- data-parallax="scroll"
+    data-z-index="1"
+    data-image-src="./images/3.jpg" -->
+
     <section
       id="home-section"
-      data-parallax="scroll"
-      data-z-index="1"
-      data-image-src="./images/3.jpg"
-      class="home-section"
+      class="home-section parallax-section"
+      style="background-image: url('./images/3.jpg')"
     >
       <div id="homecontainer" class="container" style="z-index: 2">
         <div id="homeBox" class="row">
@@ -218,6 +220,7 @@
 
         <div id="aboutdetails" class="row rounded-pill">
           <div id="intro" class="col-2 py-2">Introduction</div>
+          <div id="experience" class="col-2 py-2">Work Experience</div>
           <div id="education" class="col-2 py-2">Education</div>
           <div id="activities" class="col-2 py-2">Activities</div>
         </div>
@@ -289,20 +292,169 @@
             </div>
           </div>
         </div>
+
+        <div id="experienceBasket" class="experienceBasket">
+          <div id="experienceBasketData" class="container">
+            <!-- C-DOT Experience -->
+            <!-- Updated C-DOT Experience Section -->
+            <div id="cdotDetails" class="row">
+              <div id="cdotLeft" class="card col-6">
+                <div class="card-body">
+                  <img
+                    id="cdotImage"
+                    src="./images/cdot.png"
+                    alt="C-DOT Logo"
+                  />
+                  <h1 class="card-title">C-DOT</h1>
+                  <h5 class="display-8">Chattarpur, Delhi</h5>
+                  <h5 class="display-10">{ Software Developer }</h5>
+                  <h6 class="display-12 mt-3">Jan. '23 - Jul. '24</h6>
+                  <a
+                    href="https://www.cdot.in"
+                    class="btn btn-success rounded-pill mt-4"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+              </div>
+              <div id="cdotRight" class="card col-6">
+                <div class="card-body">
+                  <div class="project-section">
+                    <h5>NCCS Project</h5>
+                    <p class="project-description">
+                      I worked on the
+                      <span class="bold"
+                        ><a
+                          href="https://nccs.gov.in"
+                          target="_blank"
+                          class="project-link"
+                          ><strong>NCCS project</strong></a
+                        ></span
+                      >, developing its <span class="bold">homepage</span> using
+                      <span class="bold">ReactJs</span>,
+                      <span class="bold">Spring Boot</span>,
+                      <span class="bold">MySQL</span>, and
+                      <span class="bold">Thymeleaf</span> to create a
+                      <span class="italic">seamless</span> and
+                      <span class="italic">responsive</span> user experience. I
+                      integrated <span class="bold">APIs</span> and optimized
+                      <span class="bold">data flow</span> between the
+                      <span class="bold">frontend</span> and
+                      <span class="bold">backend</span>, ensuring
+                      <span class="italic">efficient communication</span>.
+                      Additionally, I enhanced the
+                      <span class="bold">UI/UX</span>, improving
+                      <span class="bold">navigation</span>,
+                      <span class="italic">accessibility</span>, and
+                      <span class="italic">overall design</span>. On the
+                      <span class="bold">backend</span>, I contributed to
+                      <span class="bold">secure data management</span> and
+                      <span class="bold">database operations</span>, ensuring
+                      <span class="italic">reliability</span>.
+                    </p>
+                  </div>
+
+                  <div class="project-section mt-4">
+                    <h5>POTP Project</h5>
+                    <p class="project-description">
+                      In the <span class="bold">POTP project</span> at C-DOT, I
+                      worked on
+                      <span class="bold"
+                        >hardware and software integration</span
+                      >
+                      for <span class="bold">ROADM5 systems</span>, ensuring
+                      <span class="italic">seamless communication</span> across
+                      <span class="bold">8T, 12T, and 4.8T networks</span>. I
+                      contributed to
+                      <span class="bold">testing and debugging</span>
+                      <span class="bold">hardware configurations</span>,
+                      including processors like <span class="bold">82xx</span>,
+                      <span class="bold">85xx</span>, and
+                      <span class="bold">T1022</span>. Additionally, I provided
+                      <span class="bold">software and database support</span>,
+                      implementing <span class="bold">NTP software</span> for
+                      embedded systems and troubleshooting
+                      <span class="bold">non-functional cards</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <img src="./images/line-break.jpg" class="rounded-pill" alt="#" />
+            <br />
+
+            <!-- Infosys Experience -->
+            <div id="infosysDetails" class="row">
+              <div id="infosysLeft" class="card col-6">
+                <div class="card-body">
+                  <div class="project-section">
+                    <h5>E-Shop Hub (E-Commerce Platform)</h5>
+                    <p class="project-description">
+                      At Infosys, I worked as a
+                      <span class="bold">Digital Specialist Engineer</span>,
+                      where I helped build a scalable
+                      <span class="bold">MERN stack</span> web application for a
+                      major client. My role involved working on both
+                      <span class="bold">frontend</span> and
+                      <span class="bold">backend</span>, improving
+                      <span class="bold">UI/UX</span> with
+                      <span class="bold">React.js</span> and managing
+                      <span class="italic">data flow</span> using
+                      <span class="bold">Node.js</span> and
+                      <span class="bold">MongoDB</span>. I collaborated with my
+                      team to optimize <span class="bold">performance</span>,
+                      <span class="bold">responsiveness</span>, and
+                      <span class="bold">user experience</span>, ensuring a
+                      <span class="italic">smooth</span> and
+                      <span class="italic">efficient application</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="infosysRight" class="card col-6">
+                <div class="card-body">
+                  <img
+                    id="infosysImage"
+                    src="./images/infosys.png"
+                    alt="Infosys Logo"
+                  />
+                  <h4 class="card-title">Infosys Technologies</h4>
+                  <h5 class="display-8">Mysore</h5>
+                  <h5 class="display-10">{ Digital Specialist Engineer }</h5>
+                  <h6 class="display-12 mt-3">Jul. '22 - Jan. '23</h6>
+                  <a
+                    href="https://www.infosys.com"
+                    class="btn btn-success rounded-pill mt-3"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id="educationBasket" class="educationBasket">
           <div id="educationBasketData" class="container">
-            <div id="graduationDetails" class="row">
-              <div id="graduationLeft" class="card col-6">
+            <div id="postgraduationDetails" class="row">
+              <div id="postgraduationLeft" class="card col-6">
                 <div class="card-body">
-                  <img id="graduationImage" src="./images/college.png" alt="" />
+                  <img
+                    id="postgraduationImage"
+                    src="./images/college.png"
+                    alt=""
+                  />
                   <h1 class="card-title">POST GRADUATION</h1>
                   <h5 class="display-10">{ Master of Technology }</h5>
-                  <h6 id="graduationSubjects" class="display-12 mt-3">
+                  <h6 id="postgraduationSubjects" class="display-12 mt-3">
                     ( COMPUTER SCIENCE AND ENGINEERING )
                   </h6>
                 </div>
               </div>
-              <div id="graduationRight" class="card col-6">
+              <div id="postgraduationRight" class="card col-6">
                 <div class="card-body">
                   <h4 id="collegeName" class="card-title">
                     National Institute of Technology, Warangal
@@ -493,6 +645,7 @@
             </div>
           </div>
         </div>
+
         <div id="activitiesBasket" class="activitiesBasket">
           <div id="activitiesBasketData" class="container">
             <div class="card">
@@ -535,11 +688,13 @@
       </div>
     </section>
 
+    <!-- data-parallax="scroll"
+    data-image-src="./images/4.jpeg" -->
+
     <section
       id="services-section"
-      class="services-section"
-      data-parallax="scroll"
-      data-image-src="./images/4.jpeg"
+      class="services-section parallax-section"
+      style="background-image: url('./images/4.jpeg')"
     >
       <div class="container">
         <div class="row">
@@ -610,9 +765,9 @@
         </div>
 
         <div id="skillsdetails" class="row">
-          <div id="languages" class="col-2">Languages</div>
-          <div id="ides" class="col-2">IDES</div>
+          <div id="languages" class="col-2">Tech Stack</div>
           <div id="dbs" class="col-2">Databases</div>
+          <div id="ides" class="col-2">IDEs</div>
           <div id="other" class="col-2">Other Skills</div>
         </div>
       </div>
@@ -620,153 +775,7 @@
       <div id="skillsdetailsBody">
         <div id="languagesBasket" class="container">
           <div id="weblanguagesBox">
-            <h5 id="webTitle" class="display-6 text-center">
-              <span class="rounded-pill py-1"
-                >Full Stack Web
-                <abbr
-                  style="text-decoration: none"
-                  title="( MongoDB-Express-ReactJs-NodeJs )"
-                  >( MERN )</abbr
-                >
-                Development
-              </span>
-            </h5>
-
             <div id="weblanguages" class="row">
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    <abbr
-                      style="text-decoration: none"
-                      title="HyperText Markup Language"
-                      >HTML</abbr
-                    >
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    90%
-                  </h6>
-                </div>
-                <div id="htmllanguageProgress" class="col-12"></div>
-              </div>
-
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    <abbr
-                      style="text-decoration: none"
-                      title="Cascading Stylesheets"
-                      >CSS</abbr
-                    >
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    85%
-                  </h6>
-                </div>
-                <div id="csslanguageProgress" class="col-12"></div>
-              </div>
-
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    JAVASCRIPT
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    95%
-                  </h6>
-                </div>
-                <div id="javascriptlanguageProgress" class="col-12"></div>
-              </div>
-
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    REACT
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    25%
-                  </h6>
-                </div>
-                <div id="reactlanguageProgress" class="col-12"></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="androidlanguagesBox">
-            <h5 id="androidTitle" class="display-6 text-center">
-              <span class="rounded-pill py-1"
-                >Android Application Development
-              </span>
-            </h5>
-
-            <div id="androidlanguages" class="row">
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    KOTLIN
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    90%
-                  </h6>
-                </div>
-                <div id="kotlinlanguageProgress" class="col-12"></div>
-              </div>
-
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    JAVA
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    55%
-                  </h6>
-                </div>
-                <div id="javalanguageProgress" class="col-12"></div>
-              </div>
-
-              <div class="d-grid col-5">
-                <div class="row">
-                  <h6 class="col-6 languageName" style="text-align: left">
-                    <abbr
-                      style="text-decoration: none"
-                      title="Extensible Markup Language"
-                      >XML</abbr
-                    >
-                  </h6>
-                  <h6
-                    class="col-6 languagepercentage"
-                    style="text-align: right"
-                  >
-                    85%
-                  </h6>
-                </div>
-                <div id="xmllanguageProgress" class="col-12"></div>
-              </div>
-            </div>
-          </div>
-
-          <div id="cplanguagesBox">
-            <h5 id="cpTitle" class="display-6 text-center">
-              <span class="rounded-pill py-1">Competitive Programming </span>
-            </h5>
-            <div id="cplanguages" class="row">
               <div class="d-grid col-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
@@ -779,31 +788,54 @@
                     90%
                   </h6>
                 </div>
-                <div id="cjlanguageProgress" class="col-12"></div>
+                <div id="javalanguageProgress" class="col-12"></div>
               </div>
 
               <div class="d-grid col-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
-                    C++
+                    Spring Boot
                   </h6>
                   <h6
                     class="col-6 languagepercentage"
                     style="text-align: right"
                   >
-                    60%
+                    80%
                   </h6>
                 </div>
-                <div id="clanguageProgress" class="col-12"></div>
+                <div id="springbootlanguageProgress" class="col-12"></div>
               </div>
-            </div>
-          </div>
 
-          <div id="otherlanguagesBox">
-            <h5 id="otherTitle" class="display-6 text-center">
-              <span class="rounded-pill px-5 py-1">Other Languages </span>
-            </h5>
-            <div id="otherlanguages" class="row">
+              <div class="d-grid col-5">
+                <div class="row">
+                  <h6 class="col-6 languageName" style="text-align: left">
+                    JAVASCRIPT
+                  </h6>
+                  <h6
+                    class="col-6 languagepercentage"
+                    style="text-align: right"
+                  >
+                    90%
+                  </h6>
+                </div>
+                <div id="javascriptlanguageProgress" class="col-12"></div>
+              </div>
+
+              <div class="d-grid col-5">
+                <div class="row">
+                  <h6 class="col-6 languageName" style="text-align: left">
+                    ReactJS
+                  </h6>
+                  <h6
+                    class="col-6 languagepercentage"
+                    style="text-align: right"
+                  >
+                    80%
+                  </h6>
+                </div>
+                <div id="reactlanguageProgress" class="col-12"></div>
+              </div>
+
               <div class="d-grid col-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
@@ -813,7 +845,7 @@
                     class="col-6 languagepercentage"
                     style="text-align: right"
                   >
-                    40%
+                    70%
                   </h6>
                 </div>
                 <div id="pythonlanguageProgress" class="col-12"></div>
@@ -822,11 +854,7 @@
               <div class="d-grid col-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
-                    <abbr
-                      style="text-decoration: none"
-                      title="Structured Query Language"
-                      >SQL</abbr
-                    >
+                    Machine Learning - (AI)
                   </h6>
                   <h6
                     class="col-6 languagepercentage"
@@ -835,67 +863,29 @@
                     80%
                   </h6>
                 </div>
-                <div id="sqllanguageProgress" class="col-12"></div>
+                <div id="mllanguageProgress" class="col-12"></div>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div id="idesBasket" class="container">
-          <div id="allidesDetails" class="row">
-            <div class="col-5">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/visualstudiocode.svg"
-                alt="VSCODE"
-              />
-              <h5 class="display-8">VISUAL STUDIO CODE</h5>
-              <ul class="list-group list-group-flush rounded-pill">
-                <li class="list-group-item">Competitive Programming</li>
-                <li class="list-group-item">Full Stack Web Development</li>
-              </ul>
-            </div>
-
-            <div class="col-5">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/eclipseide.svg"
-                alt="eclipseide"
-              />
-              <h5 class="display-8">ECLIPSE IDE</h5>
-              <ul class="list-group list-group-flush rounded-pill">
-                <li class="list-group-item">Competitive Programming</li>
-                <li class="list-group-item">Backend Development</li>
-              </ul>
-            </div>
-
-            <div class="col-5">
-              <img
-                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/androidstudio.svg"
-                alt="androidstudio"
-              />
-              <h5 class="display-8">ANDROID STUDIO</h5>
-              <ul class="list-group list-group-flush rounded-pill">
-                <li class="list-group-item">Android Application Development</li>
-              </ul>
+              <div class="d-grid col-5">
+                <div class="row">
+                  <h6 class="col-6 languageName" style="text-align: left">C</h6>
+                  <h6
+                    class="col-6 languagepercentage"
+                    style="text-align: right"
+                  >
+                    70%
+                  </h6>
+                </div>
+                <div id="clanguageProgress" class="col-12"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="dbsBasket" class="container">
           <div id="webdbsBox">
-            <h5 id="webDBTitle" class="display-6 text-center">
-              <span class="rounded-pill py-1"
-                >Full Stack Web
-                <abbr
-                  style="text-decoration: none"
-                  title="( MongoDB-Express-ReactJs-NodeJs )"
-                  >( MERN )</abbr
-                >
-                Development
-              </span>
-            </h5>
-
             <div id="webdbs" class="row">
-              <div class="col-5 rounded-pill">
+              <div class="col-2">
                 <img
                   src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/mongodb.svg"
                   alt="mongodb"
@@ -903,51 +893,39 @@
                 <h5 class="display-8">MONGO DB</h5>
               </div>
 
-              <div class="col-5 rounded-pill">
-                <img
-                  src="./images/atla.jpg"
-                  alt="mongodb"
-                  style="width: 200px"
-                />
-                <h5 class="display-8">MONGO DB ATLAS</h5>
-              </div>
-
-              <div class="col-5 rounded-pill">
-                <img src="./images/mongoose.png" alt="mongoose" />
-                <h5 class="display-8">MONGOOSE PACKAGE</h5>
-              </div>
-            </div>
-          </div>
-
-          <div id="androiddbsBox">
-            <h5 id="androidDBTitle" class="display-6 text-center">
-              <span class="rounded-pill py-1"
-                >Android Application Development
-              </span>
-            </h5>
-
-            <div id="androiddbs" class="row">
-              <div class="col-5 rounded-pill">
-                <img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/firebase.svg"
-                  alt="firebase"
-                />
-                <h5 class="display-8">FIREBASE DATABASE</h5>
-              </div>
-
-              <div class="col-5 rounded-pill">
+              <div class="col-2">
                 <img
                   src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/mysql.svg"
-                  alt="mongodb"
-                  style="width: 200px"
+                  alt="MySql"
                 />
                 <h5 class="display-8">MYSQL</h5>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div class="col-5 rounded-pill">
-                <img src="./images/room.png" alt="mongoose" />
-                <h5 class="display-8">ROOM PERSISTENCE LIBRARY</h5>
-              </div>
+        <div id="idesBasket" class="container">
+          <div id="allidesDetails" class="row">
+            <div class="col-3">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/visualstudiocode.svg"
+                alt="VSCODE"
+              />
+              <h5 class="display-8">VISUAL STUDIO CODE</h5>
+              <ul class="list-group list-group-flush rounded-pill">
+                <li class="list-group-item">Frontend Development</li>
+              </ul>
+            </div>
+
+            <div class="col-3">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/intellijidea.svg"
+                alt="intellijidea"
+              />
+              <h5 class="display-8">INTELLIJ IDEA</h5>
+              <ul class="list-group list-group-flush rounded-pill">
+                <li class="list-group-item">Backend Development</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -970,32 +948,36 @@
           <div class="row">
             <h4 class="display-8 col-6">OPERATING SYSTEM</h4>
             <ul class="list-group list-group-flush col-6">
-              <li class="list-group-item">⦿ WINDOWS 10</li>
+              <li class="list-group-item">⦿ WINDOWS</li>
+              <li class="list-group-item">⦿ Linux</li>
+              <li class="list-group-item">⦿ macOS</li>
             </ul>
           </div>
 
           <div class="row">
             <h4 class="display-8 col-6">IT SKILLS</h4>
             <ul class="list-group list-group-flush col-6">
-              <li class="list-group-item">⦿ NODE JS</li>
-              <li class="list-group-item">⦿ BOOTSTRAP</li>
-              <li class="list-group-item">
+              <!-- <li class="list-group-item">⦿ NODE JS</li> -->
+              <!-- <li class="list-group-item">⦿ BOOTSTRAP</li> -->
+              <!-- <li class="list-group-item">
                 ⦿ <abbr title="Java Script Object Notation">JSON</abbr>
-              </li>
+              </li> -->
               <li class="list-group-item">⦿ DATA STRUCTURES</li>
-              <li class="list-group-item">⦿ PROBLEM SOLVING</li>
+              <li class="list-group-item">⦿ SYSTEM DESIGN</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- data-parallax="scroll"
+    data-z-index="-10"
+    data-image-src="./images/5.jpeg" -->
+
     <section
       id="links-section"
-      class="links-section"
-      data-parallax="scroll"
-      data-z-index="-10"
-      data-image-src="./images/5.jpeg"
+      class="links-section parallax-section"
+      style="background-image: url('./images/5.jpeg')"
     >
       <div class="container">
         <div class="row">
@@ -1494,7 +1476,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="parallax.min.js "></script>
+    <!-- <script src="parallax.min.js "></script> -->
 
     <script src="https://smtpjs.com/v3/smtp.js "></script>
 
@@ -1503,7 +1485,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("_Jfx_xUEhuVJQhy2Z"); // Replace with your EmailJS User ID
+        emailjs.init("_Jfx_xUEhuVJQhy2Z");
       })();
     </script>
 

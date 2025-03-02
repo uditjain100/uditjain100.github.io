@@ -23,15 +23,18 @@ $(document).scroll(function () {
 // *********************** About Section
 
 const intro = document.querySelector("#intro");
+const experience = document.querySelector("#experience");
 const education = document.querySelector("#education");
 const activities = document.querySelector("#activities");
 
 const introBasket = document.querySelector("#introBasket");
+const experienceBasket = document.querySelector("#experienceBasket");
 const educationBasket = document.querySelector("#educationBasket");
 const activitiesBasket = document.querySelector("#activitiesBasket");
 
 const removeDisplayAbout = () => {
   introBasket.style.display = "none";
+  experienceBasket.style.display = "none";
   educationBasket.style.display = "none";
   activitiesBasket.style.display = "none";
 };
@@ -42,6 +45,9 @@ intro.addEventListener("click", () => {
   intro.style.backgroundColor = "rgb(0,0,255)";
   intro.style.borderColor = "rgb(255,255,255)";
   intro.style.color = "rgb(255,255,255)";
+  experience.style.backgroundColor = "rgb(255,255,255)";
+  experience.style.borderColor = "rgb(0,0,255)";
+  experience.style.color = "rgb(0,0,255)";
   education.style.backgroundColor = "rgb(255,255,255)";
   education.style.borderColor = "rgb(0,0,255)";
   education.style.color = "rgb(0,0,255)";
@@ -55,6 +61,9 @@ education.addEventListener("click", () => {
   intro.style.backgroundColor = "rgb(255,255,255)";
   intro.style.borderColor = "rgb(0,0,255)";
   intro.style.color = "rgb(0,0,255)";
+  experience.style.backgroundColor = "rgb(255,255,255)";
+  experience.style.borderColor = "rgb(0,0,255)";
+  experience.style.color = "rgb(0,0,255)";
   educationBasket.style.display = "block";
   education.style.backgroundColor = "rgb(0,0,255)";
   education.style.borderColor = "rgb(255,255,255)";
@@ -66,16 +75,36 @@ education.addEventListener("click", () => {
 
 activities.addEventListener("click", () => {
   removeDisplayAbout();
-  activitiesBasket.style.display = "block";
   intro.style.backgroundColor = "rgb(255,255,255)";
   intro.style.borderColor = "rgb(0,0,255)";
   intro.style.color = "rgb(0,0,255)";
+  experience.style.backgroundColor = "rgb(255,255,255)";
+  experience.style.borderColor = "rgb(0,0,255)";
+  experience.style.color = "rgb(0,0,255)";
   education.style.backgroundColor = "rgb(255,255,255)";
   education.style.borderColor = "rgb(0,0,255)";
   education.style.color = "rgb(0,0,255)";
+  activitiesBasket.style.display = "block";
   activities.style.backgroundColor = "rgb(0,0,255)";
   activities.style.borderColor = "rgb(255,255,255)";
   activities.style.color = "rgb(255,255,255)";
+});
+
+experience.addEventListener("click", () => {
+  removeDisplayAbout();
+  intro.style.backgroundColor = "rgb(255,255,255)";
+  intro.style.borderColor = "rgb(0,0,255)";
+  intro.style.color = "rgb(0,0,255)";
+  experienceBasket.style.display = "block";
+  experience.style.backgroundColor = "rgb(0,0,255)";
+  experience.style.borderColor = "rgb(255,255,255)";
+  experience.style.color = "rgb(255,255,255)";
+  education.style.backgroundColor = "rgb(255,255,255)";
+  education.style.borderColor = "rgb(0,0,255)";
+  education.style.color = "rgb(0,0,255)";
+  activities.style.backgroundColor = "rgb(255,255,255)";
+  activities.style.borderColor = "rgb(0,0,255)";
+  activities.style.color = "rgb(0,0,255)";
 });
 
 var typed = new Typed(".typing", {
@@ -131,6 +160,25 @@ dbs.addEventListener("click", () => {
 other.addEventListener("click", () => {
   removeDisplaySkills();
   otherBasket.style.display = "block";
+});
+
+languagesIds = ['javalanguageProgress', 'springbootlanguageProgress', 'javascriptlanguageProgress', 'reactlanguageProgress', 'pythonlanguageProgress', 'mllanguageProgress', 'clanguageProgress']
+document.addEventListener("DOMContentLoaded", function() {
+  languagesIds.forEach(id => {
+    const progressBar = document.getElementById(id);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          progressBar.classList.add('animate');
+        }
+      });
+    }, { 
+      threshold: 0.5, // Trigger when 50% visible
+      rootMargin: '0px 0px -100px 0px' // Adjust based on your needs
+    });
+
+    observer.observe(progressBar);
+  });
 });
 
 // *********************** Links Section
