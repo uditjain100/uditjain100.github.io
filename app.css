@@ -1701,7 +1701,7 @@ address a img {
   text-align: center;
   background-color: #053254;
   font-family: "Montserrat";
-  z-index: -100;
+  z-index: 1000;
 }
 
 /* Add this CSS */
@@ -1735,12 +1735,12 @@ address a img {
 
 /* Navbar */
 #navbar {
-  z-index: 1000;
+  z-index: 999;
   /* Higher than parallax sections */
 }
 
 /* Scroll Button */
 #scrollbtn {
-  z-index: 1000;
+  z-index: 999;
   /* Higher than parallax sections */
 }
