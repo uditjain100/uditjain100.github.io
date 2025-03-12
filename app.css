@@ -1700,6 +1700,7 @@ address a img {
   text-align: center;
   background-color: #053254;
   font-family: "Montserrat";
+  z-index: -100;
 }
 
 /* Add this CSS */
