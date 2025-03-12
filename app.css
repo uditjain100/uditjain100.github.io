@@ -844,6 +844,7 @@ img.rounded-pill {
     /* Further reduced margin for mobile */
     height: auto;
     /* Auto height to fit content */
+    max-width: 80%;
   }
 }
 
