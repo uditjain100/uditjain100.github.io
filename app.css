@@ -801,6 +801,122 @@ img.rounded-pill {
 }
 
 
+#servicesdetails {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#parkinsondetails,
+#truthlensdetails,
+#yelpcampdetails {
+  background-color: #222;
+  padding: 20px;
+  /* Increased padding for better spacing */
+  min-width: 320px;
+  border: none;
+  margin-bottom: 50px;
+  /* Reduced margin for mobile view */
+  transition: 0.5s;
+  border-bottom-left-radius: 20%;
+  border-bottom: 2px blue solid;
+  border-right: 2px blue solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* Full width on mobile */
+  max-width: 400px;
+  /* Limit maximum width for larger screens */
+  height: auto;
+  /* Auto height to fit content */
+}
+
+@media (max-width: 768px) {
+
+  #parkinsondetails,
+  #truthlensdetails,
+  #yelpcampdetails {
+    margin-bottom: 30px;
+    /* Further reduced margin for mobile */
+    height: auto;
+    /* Auto height to fit content */
+  }
+}
+
+#parkinsondetails:hover,
+#truthlensdetails:hover,
+#yelpcampdetails:hover {
+  transform: scale(1.05);
+  background-color: blue;
+  border-bottom: 2px white solid;
+  border-right: 2px white solid;
+}
+
+#parkinsondetails div,
+#truthlensdetails div,
+#yelpcampdetails div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#parkinsondetails .project-initial,
+#truthlensdetails .project-initial,
+#yelpcampdetails .project-initial {
+  background-color: blue;
+  border-radius: 50%;
+  height: 100px;
+  /* Reduced size for mobile */
+  width: 100px;
+  /* Reduced size for mobile */
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  /* Reduced font size for mobile */
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+#parkinsondetails div h5,
+#truthlensdetails div h5,
+#yelpcampdetails div h5 {
+  font-family: "Montserrat";
+  font-size: 20px;
+  /* Reduced font size for mobile */
+  text-align: center;
+  margin-bottom: 15px;
+  /* Reduced margin for mobile */
+}
+
+#parkinsondetails div #text,
+#truthlensdetails div #text,
+#yelpcampdetails div #text {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  /* Reduced font size for mobile */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Button styling */
+.btn-success {
+  margin-top: 15px;
+  /* Added margin for better spacing */
+  width: 100%;
+  /* Full width on mobile */
+  max-width: 200px;
+  /* Limit maximum width */
+}
+
 /* ************************************* Skills Section */
 
 #skills-heading {
