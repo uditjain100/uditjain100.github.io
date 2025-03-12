@@ -68,8 +68,9 @@ h4 .rounded-pill {
 /* **************************************** Nav Section */
 
 #navbar.scrolled {
-  background-image: url("./images/navbg.jpeg") !important;
+  background-image: url("./images/4.jpeg") !important;
   transition: background-image 1s linear;
+  z-index: 1000;
 }
 
 #navtitle {
@@ -116,9 +117,27 @@ h4 .rounded-pill {
 }
 
 @media (max-width: 993px) {
-  #navlist li img {
+  /* #navlist li img {
     display: flex;
     background-color: grey;
+  } */
+
+  #navbar {
+    background-image: url("./images/4.jpeg") !important;
+  }
+
+  #navlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navlist li {
+    max-height: 25px;
+    border: none;
+    border-bottom: 1px white solid;
+    padding: 0px;
+    margin-bottom: 15px;
   }
 }
 
@@ -719,7 +738,6 @@ img.rounded-pill {
   text-align: center;
 } */
 
-
 #parkinsondetails,
 #truthlensdetails,
 #yelpcampdetails {
@@ -738,7 +756,6 @@ img.rounded-pill {
 }
 
 @media (max-width: 1200px) {
-
   #parkinsondetails,
   #truthlensdetails,
   #yelpcampdetails {
@@ -800,7 +817,6 @@ img.rounded-pill {
   text-align: center;
 }
 
-
 #servicesdetails {
   margin-top: 150px;
   display: flex;
@@ -836,7 +852,6 @@ img.rounded-pill {
 }
 
 @media (max-width: 768px) {
-
   #parkinsondetails,
   #truthlensdetails,
   #yelpcampdetails {
@@ -1354,7 +1369,6 @@ img.rounded-pill {
   font-weight: 400;
   font-family: "Montserrat";
 }
-
 
 #allidesDetails {
   display: flex;
