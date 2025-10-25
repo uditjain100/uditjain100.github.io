@@ -420,7 +420,8 @@ img.rounded-pill {
 }
 
 #cdotDetails,
-#infosysDetails {
+#infosysDetails,
+#ciscoDetails {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -428,7 +429,8 @@ img.rounded-pill {
 }
 
 #cdotLeft,
-#infosysLeft {
+#infosysLeft,
+#ciscoLeft {
   min-width: 320px;
   text-align: right;
   font-family: "Spartan";
@@ -438,7 +440,8 @@ img.rounded-pill {
 }
 
 #cdotRight,
-#infosysRight {
+#infosysRight,
+#ciscoRight {
   min-width: 320px;
   text-align: left;
   font-family: "Spartan";
@@ -448,7 +451,8 @@ img.rounded-pill {
 }
 
 #cdotName,
-#infosysName {
+#infosysName,
+#ciscoName {
   font-weight: 700;
   text-decoration: underline;
   line-height: 40px;
@@ -456,7 +460,8 @@ img.rounded-pill {
 
 /* Company Image Styling */
 #cdotImage,
-#infosysImage {
+#infosysImage,
+#ciscoImage {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
@@ -506,28 +511,33 @@ img.rounded-pill {
 }
 
 /* Infosys Restructuring */
-#infosysLeft {
+#infosysLeft,
+#ciscoLeft {
   border-right: 1px solid black;
   text-align: left;
 }
 
-#infosysRight {
+#infosysRight,
+#ciscoRight {
   text-align: center;
   border-left: 1px solid black;
 }
 
-#infosysRight .card-title {
+#infosysRight .card-title,
+#ciscoRight .card-title {
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
-#infosysImage {
+#infosysImage,
+#ciscoImage {
   margin-bottom: 20px;
 }
 
 /* Button Positioning */
 #cdotLeft .btn-success,
-#infosysRight .btn-success {
+#infosysRight .btn-success,
+#ciscoRight .btn-success {
   margin-top: auto;
   width: 120px;
 }
