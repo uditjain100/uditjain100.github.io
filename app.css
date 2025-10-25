@@ -421,7 +421,8 @@ img.rounded-pill {
 
 #cdotDetails,
 #infosysDetails,
-#ciscoDetails {
+#ciscoDetails,
+#intelDetails {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -430,7 +431,8 @@ img.rounded-pill {
 
 #cdotLeft,
 #infosysLeft,
-#ciscoLeft {
+#ciscoLeft,
+#intelLeft {
   min-width: 320px;
   text-align: right;
   font-family: "Spartan";
@@ -441,7 +443,8 @@ img.rounded-pill {
 
 #cdotRight,
 #infosysRight,
-#ciscoRight {
+#ciscoRight,
+#intelRight {
   min-width: 320px;
   text-align: left;
   font-family: "Spartan";
@@ -452,7 +455,8 @@ img.rounded-pill {
 
 #cdotName,
 #infosysName,
-#ciscoName {
+#ciscoName,
+#intelName {
   font-weight: 700;
   text-decoration: underline;
   line-height: 40px;
@@ -461,7 +465,8 @@ img.rounded-pill {
 /* Company Image Styling */
 #cdotImage,
 #infosysImage,
-#ciscoImage {
+#ciscoImage,
+#intelImage {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
@@ -492,12 +497,14 @@ img.rounded-pill {
 
 /* Updated CSS for Experience Section */
 /* C-DOT Styling */
-#cdotLeft {
+#cdotLeft,
+#intelLeft {
   text-align: center;
   border-right: 1px solid black;
 }
 
-#cdotRight .card-title abbr {
+#cdotRight .card-title abbr,
+#intelRight .card-title abbr {
   font-size: 1.8rem;
   text-decoration: none;
 }
@@ -537,7 +544,8 @@ img.rounded-pill {
 /* Button Positioning */
 #cdotLeft .btn-success,
 #infosysRight .btn-success,
-#ciscoRight .btn-success {
+#ciscoRight .btn-success,
+#intelLeft .btn-success {
   margin-top: auto;
   width: 120px;
 }
