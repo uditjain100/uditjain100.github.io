@@ -289,10 +289,10 @@ img.rounded-pill {
 
   #navlist li {
     max-height: none;
-    height: auto;
+    height: 44px;
     border: none;
     border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
-    padding: 8px 20px;
+    padding: 0;
     margin: 0;
     width: 70%;
     font-size: 0.95rem;
@@ -300,16 +300,24 @@ img.rounded-pill {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     justify-content: center;
+    position: relative;
   }
 
-  #navlist li:last-child {
-    border-bottom: none;
-  }
+  #navlist li:last-child { border-bottom: none; }
+
+  /* Hide the icon spans — they intercept taps */
+  #navlist li span { display: none !important; }
 
   #navlist li a {
     font-size: 0.95rem;
-    padding: 0;
     text-align: center;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
   #navlist li:hover {

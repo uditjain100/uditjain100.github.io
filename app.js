@@ -1,3 +1,18 @@
+// *********************** Mobile Nav — make entire li clickable + auto-close
+document.querySelectorAll("#navlist li").forEach((li) => {
+  li.addEventListener("click", (e) => {
+    const link = li.querySelector("a");
+    if (link && e.target !== link) link.click();
+
+    // Auto-close collapsed navbar on mobile
+    const navbarCollapse = document.querySelector("#navbarNav");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      const toggler = document.querySelector(".navbar-toggler");
+      if (toggler) toggler.click();
+    }
+  });
+});
+
 // *********************** Nav Active Highlight
 
 const navSections = [
