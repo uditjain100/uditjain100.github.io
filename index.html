@@ -55,12 +55,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -74,7 +69,7 @@
     /></a>
 
     <header class="header">
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
           <abbr
             title="Geek"
@@ -84,7 +79,7 @@
             >OTAKU</abbr
           >
           <button
-            class="navbar-toggler rounded-pill border border-info bg-light"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -165,17 +160,13 @@
     >
       <div id="homecontainer" class="container" style="z-index: 2">
         <div id="homeBox" class="row">
-          <div id="homeboxdetailsleft" class="col-6">
+          <div id="homeboxdetailsleft" class="col-12 col-md-6">
             <h5 id="line1" style="font-family: &quot;Montserrat&quot;">
               Hey there, my name is
             </h5>
             <h1
               id="line2"
-              style="
-                font-size: 90px;
-                font-family: &quot;Montserrat&quot;;
-                font-weight: 500;
-              "
+              style="font-family: &quot;Montserrat&quot;; font-weight: 500;"
             >
               Udit Jain
             </h1>
@@ -226,7 +217,7 @@
         <div id="introBasket" class="introBasket">
           <div id="introBasketData" class="container">
             <div id="introDetails" class="row">
-              <div id="introDetailsLeft" class="card col-4 my-3 ml-auto">
+              <div id="introDetailsLeft" class="card col-12 col-md-4 my-3 ml-auto">
                 <img
                   id="aboutProfileImage"
                   src="./images/profile.png"
@@ -234,7 +225,7 @@
                   alt="..."
                 />
               </div>
-              <article id="introDetailsRight" class="card col-8">
+              <article id="introDetailsRight" class="card col-12 col-md-8">
                 <div class="card-body">
                   <h3 id="aboutIntroTitle" class="card-title">
                     I'm UDIT JAIN and I'm a
@@ -301,14 +292,14 @@
           <div id="experienceBasketData" class="container">
             <!-- Intel Experience -->
             <div id="intelDetails" class="row">
-              <div id="intelLeft" class="card col-6">
+              <div id="intelLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="intelImage"
                     src="./images/intel.png"
                     alt="Intel Logo"
                   />
-                  <h1 class="card-title">Intel Corporation</h1>
+                  <h2 class="card-title">Intel Corporation</h2>
                   <h5 class="display-8">Bengaluru</h5>
                   <h5 class="display-10">{ Software Engineer Intern }</h5>
                   <!-- If you want dates here, add them once you decide the exact range -->
@@ -323,7 +314,7 @@
                 </div>
               </div>
 
-              <div id="intelRight" class="card col-6">
+              <div id="intelRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <div class="project-section">
                     <h5>Semiconductor Critical Analysis Tool Enhancements</h5>
@@ -391,7 +382,7 @@
 
             <!-- CISCO Experience -->
             <div id="ciscoDetails" class="row">
-              <div id="ciscoLeft" class="card col-6">
+              <div id="ciscoLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <div class="project-section">
                     <h5>Agentic AI Automation for Regression Testing</h5>
@@ -423,14 +414,14 @@
                 </div>
               </div>
 
-              <div id="ciscoRight" class="card col-6">
+              <div id="ciscoRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="ciscoImage"
                     src="./images/cisco.png"
                     alt="CISCO Logo"
                   />
-                  <h4 class="card-title">CISCO Systems</h4>
+                  <h2 class="card-title">CISCO Systems</h2>
                   <h5 class="display-8">Bengaluru</h5>
                   <h5 class="display-10">{ Software Engineer Intern }</h5>
                   <h6 class="display-12 mt-3">May ’25 – Jul. ’25</h6>
@@ -451,14 +442,14 @@
             <!-- C-DOT Experience -->
             <!-- Updated C-DOT Experience Section -->
             <div id="cdotDetails" class="row">
-              <div id="cdotLeft" class="card col-6">
+              <div id="cdotLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="cdotImage"
                     src="./images/cdot.png"
                     alt="C-DOT Logo"
                   />
-                  <h1 class="card-title">C-DOT</h1>
+                  <h2 class="card-title">C-DOT</h2>
                   <h5 class="display-8">Chattarpur, Delhi</h5>
                   <h5 class="display-10">{ Software Developer }</h5>
                   <h6 class="display-12 mt-3">Jan. '23 - Jul. '24</h6>
@@ -470,7 +461,7 @@
                   >
                 </div>
               </div>
-              <div id="cdotRight" class="card col-6">
+              <div id="cdotRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <div class="project-section">
                     <h5>NCCS Project</h5>
@@ -540,7 +531,7 @@
 
             <!-- Infosys Experience -->
             <div id="infosysDetails" class="row">
-              <div id="infosysLeft" class="card col-6">
+              <div id="infosysLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <div class="project-section">
                     <h5>E-Shop Hub (E-Commerce Platform)</h5>
@@ -567,14 +558,14 @@
                 </div>
               </div>
 
-              <div id="infosysRight" class="card col-6">
+              <div id="infosysRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="infosysImage"
                     src="./images/infosys.png"
                     alt="Infosys Logo"
                   />
-                  <h4 class="card-title">Infosys Technologies</h4>
+                  <h2 class="card-title">Infosys Technologies</h2>
                   <h5 class="display-8">Mysore</h5>
                   <h5 class="display-10">{ Digital Specialist Engineer }</h5>
                   <h6 class="display-12 mt-3">Jul. '22 - Jan. '23</h6>
@@ -593,23 +584,23 @@
         <div id="educationBasket" class="educationBasket">
           <div id="educationBasketData" class="container">
             <div id="postgraduationDetails" class="row">
-              <div id="postgraduationLeft" class="card col-6">
+              <div id="postgraduationLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="postgraduationImage"
                     src="./images/college.png"
                     alt=""
                   />
-                  <h1 class="card-title">POST GRADUATION</h1>
+                  <h2 class="card-title">POST GRADUATION</h2>
                   <h5 class="display-10">{ Master of Technology }</h5>
                   <h6 id="postgraduationSubjects" class="display-12 mt-3">
                     ( COMPUTER SCIENCE AND ENGINEERING )
                   </h6>
                 </div>
               </div>
-              <div id="postgraduationRight" class="card col-6">
+              <div id="postgraduationRight" class="card col-12 col-md-6">
                 <div class="card-body">
-                  <h4 id="collegeName" class="card-title">
+                  <h3 id="collegeName" class="card-title">
                     National Institute of Technology, Warangal
                     <abbr
                       title="National Institute of Technology, Warangal"
@@ -617,14 +608,14 @@
                     >
                       (NITW)</abbr
                     >
-                  </h4>
+                  </h3>
                   <h5 id="collegeAddress" class="display-8">
                     Warangal, Telangana
                   </h5>
                   <h6 id="collegeTimestamp" class="display-12">
                     [ August 2024 - May 2026 ]
                   </h6>
-                  <h3 id="collegeMarks" class="display-8">CGPA : 8.3</h3>
+                  <h5 id=collegeMarks class="display-8">CGPA : 8.3</h3>
                   <p class="card-text">
                     Completed M.Tech in Computer Science & Engineering at NIT
                     Warangal, specializing in Machine Learning, Deep Learning,
@@ -646,9 +637,9 @@
             <br />
 
             <div id="graduationDetails" class="row">
-              <div id="graduationLeft" class="card col-6">
+              <div id="graduationLeft" class="card col-12 col-md-6">
                 <div class="card-body">
-                  <h4 id="collegeName" class="card-title">
+                  <h3 id="graduationCollegeName" class="card-title">
                     MAHARAJA AGRASEN INSTITUTE OF TECHNOLOGY
                     <abbr
                       title="Guru Gobind Singh Indraprastha University"
@@ -656,12 +647,12 @@
                     >
                       (IPU)</abbr
                     >
-                  </h4>
-                  <h5 id="collegeAddress" class="display-8">Rohini, Delhi</h5>
-                  <h6 id="collegeTimestamp" class="display-12">
+                  </h3>
+                  <h5 id="graduationCollegeAddress" class="display-8">Rohini, Delhi</h5>
+                  <h6 id="graduationCollegeTimestamp" class="display-12">
                     [ August 2018 - August 2022 ]
                   </h6>
-                  <h3 id="collegeMarks" class="display-8">
+                  <h5 id=graduationCollegeMarks class="display-8">
                     Aggregate : 90.06%, CGPA : 9.06
                   </h3>
                   <p class="card-text">
@@ -679,10 +670,10 @@
                   >
                 </div>
               </div>
-              <div id="graduationRight" class="card col-6">
+              <div id="graduationRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img id="graduationImage" src="./images/college.png" alt="" />
-                  <h1 class="card-title">GRADUATION</h1>
+                  <h2 class="card-title">GRADUATION</h2>
                   <h5 class="display-10">{ Bachelor of Technology }</h5>
                   <h6 id="graduationSubjects" class="display-12 mt-3">
                     ( COMPUTER SCIENCE AND ENGINEERING )
@@ -696,14 +687,14 @@
             <br />
 
             <div id="IntermediateDetails" class="row">
-              <div id="IntermediateLeft" class="card col-6">
+              <div id="IntermediateLeft" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img
                     id="IntermediateImage"
                     src="./images/intermediate.jpg"
                     alt=""
                   />
-                  <h1 class="card-title">SENIOR SECONDARY</h1>
+                  <h2 class="card-title">SENIOR SECONDARY</h2>
                   <h5 class="display-10">
                     { 12th -
                     <abbr
@@ -718,18 +709,18 @@
                   </h6>
                 </div>
               </div>
-              <div id="IntermediateRight" class="card col-6">
+              <div id="IntermediateRight" class="card col-12 col-md-6">
                 <div class="card-body">
-                  <h4 id="IntermediateName" class="card-title">
+                  <h3 id="IntermediateName" class="card-title">
                     ABHINAV PUBLIC SCHOOL
-                  </h4>
+                  </h3>
                   <h5 id="IntermediateAddress" class="display-8">
                     Pitampura, Delhi
                   </h5>
                   <h6 id="IntermediateTimestamp" class="display-12">
                     [ APRIL 2017 - APRIL 2018 ]
                   </h6>
-                  <h3 id="IntermediateMarks" class="display-8">
+                  <h5 id=IntermediateMarks class="display-8">
                     Percentage : 91.4%
                   </h3>
                   <p class="card-text">
@@ -752,18 +743,18 @@
             <br />
 
             <div id="highschoolDetails" class="row">
-              <div id="highschoolLeft" class="card col-6">
+              <div id="highschoolLeft" class="card col-12 col-md-6">
                 <div class="card-body">
-                  <h4 id="highschoolName" class="card-title">
+                  <h3 id="highschoolName" class="card-title">
                     GATEWAY INTERNATIONAL SCHOOL
-                  </h4>
+                  </h3>
                   <h5 id="highschoolAddress" class="display-8">
                     Uttar Pradesh
                   </h5>
                   <h6 id="highschoolTimestamp" class="display-12">
                     [ APRIL 2015 - APRIL 2016 ]
                   </h6>
-                  <h3 id="highschoolMarks" class="display-8">CGPA : 10.0</h3>
+                  <h5 id=highschoolMarks class="display-8">CGPA : 10.0</h3>
                   <p class="card-text">
                     Completed 10th (CBSE) from Gateway International School,
                     Baghpat, securing a perfect CGPA of 10.0. Cherishing the
@@ -778,10 +769,10 @@
                   >
                 </div>
               </div>
-              <div id="highschoolRight" class="card col-6">
+              <div id="highschoolRight" class="card col-12 col-md-6">
                 <div class="card-body">
                   <img id="highSchoolImage" src="./images/high.png" alt="" />
-                  <h1 class="card-title">SECONDARY</h1>
+                  <h2 class="card-title">SECONDARY</h2>
                   <h5 class="display-10">
                     { 10th -
                     <abbr
@@ -965,7 +956,7 @@
         <div id="languagesBasket" class="container">
           <div id="weblanguagesBox">
             <div id="weblanguages" class="row">
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     CORE JAVA
@@ -980,7 +971,7 @@
                 <div id="javalanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     Spring Boot
@@ -995,7 +986,7 @@
                 <div id="springbootlanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     JAVASCRIPT
@@ -1010,7 +1001,7 @@
                 <div id="javascriptlanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     ReactJS
@@ -1025,7 +1016,7 @@
                 <div id="reactlanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     PYTHON
@@ -1040,7 +1031,7 @@
                 <div id="pythonlanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">
                     LangChain
@@ -1055,7 +1046,7 @@
                 <div id="mllanguageProgress" class="col-12"></div>
               </div>
 
-              <div class="d-grid col-5">
+              <div class="d-grid col-12 col-sm-6 col-lg-5">
                 <div class="row">
                   <h6 class="col-6 languageName" style="text-align: left">C</h6>
                   <h6
@@ -1123,22 +1114,22 @@
 
         <div id="otherBasket" class="container">
           <div class="row">
-            <h4 class="display-8 col-6">VERSION CONTROL</h4>
-            <ul class="list-group list-group-flush col-6">
+            <h4 class="display-8 col-12 col-sm-6">VERSION CONTROL</h4>
+            <ul class="list-group list-group-flush col-12 col-sm-6">
               <li class="list-group-item">⦿ GIT</li>
             </ul>
           </div>
 
           <!-- <div class="row">
-            <h4 class="display-8 col-6">FRAMEWORK</h4>
-            <ul class="list-group list-group-flush col-6">
+            <h4 class="display-8 col-12 col-sm-6">FRAMEWORK</h4>
+            <ul class="list-group list-group-flush col-12 col-sm-6">
               <li class="list-group-item">⦿ EXPRESS</li>
             </ul>
           </div> -->
 
           <div class="row">
-            <h4 class="display-8 col-6">OPERATING SYSTEM</h4>
-            <ul class="list-group list-group-flush col-6">
+            <h4 class="display-8 col-12 col-sm-6">OPERATING SYSTEM</h4>
+            <ul class="list-group list-group-flush col-12 col-sm-6">
               <li class="list-group-item">⦿ Linux</li>
               <li class="list-group-item">⦿ macOS</li>
               <li class="list-group-item">⦿ Windows</li>
@@ -1146,8 +1137,8 @@
           </div>
 
           <div class="row">
-            <h4 class="display-8 col-6">IT SKILLS</h4>
-            <ul class="list-group list-group-flush col-6">
+            <h4 class="display-8 col-12 col-sm-6">IT SKILLS</h4>
+            <ul class="list-group list-group-flush col-12 col-sm-6">
               <!-- <li class="list-group-item">⦿ NODE JS</li> -->
               <!-- <li class="list-group-item">⦿ BOOTSTRAP</li> -->
               <!-- <li class="list-group-item">
@@ -1569,7 +1560,7 @@
           class="validated-form"
         >
           <div id="messageForm" class="row">
-            <div id="messageDetails" class="col-5">
+            <div id="messageDetails" class="col-12 col-md-5">
               <div>
                 <label for="title">Name</label>
                 <input
@@ -1620,7 +1611,7 @@
               </div>
             </div>
 
-            <div id="messageBody" class="col-5">
+            <div id="messageBody" class="col-12 col-md-5">
               <label for="message" class="form-label">Message</label>
               <textarea
                 name="message"
@@ -1666,9 +1657,7 @@
 
     <!-- <script src="parallax.min.js "></script> -->
 
-    <script src="https://smtpjs.com/v3/smtp.js "></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
@@ -1677,6 +1666,6 @@
       })();
     </script>
 
-    <script src="app.js "></script>
+    <script src="app.js"></script>
   </body>
 </html>

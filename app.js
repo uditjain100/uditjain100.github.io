@@ -1,3 +1,35 @@
+// *********************** Nav Active Highlight
+
+const navSections = [
+  { id: "home-section",     li: document.querySelector('#navlist a[href="#"]')?.closest("li") },
+  { id: "about-section",    li: document.querySelector('#navlist a[href="#about-section"]')?.closest("li") },
+  { id: "services-section", li: document.querySelector('#navlist a[href="#services-section"]')?.closest("li") },
+  { id: "skills-section",   li: document.querySelector('#navlist a[href="#skills-section"]')?.closest("li") },
+  { id: "links-section",    li: document.querySelector('#navlist a[href="#links-section"]')?.closest("li") },
+  { id: "contact-section",  li: document.querySelector('#navlist a[href="#contact-section"]')?.closest("li") },
+];
+
+function setActiveNav() {
+  const scrollY = window.scrollY + window.innerHeight * 0.35;
+  let current = navSections[0];
+
+  navSections.forEach(({ id }) => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) {
+      current = navSections.find(s => s.id === id);
+    }
+  });
+
+  navSections.forEach(({ li }) => {
+    if (li) li.classList.remove("nav-active");
+  });
+
+  if (current && current.li) current.li.classList.add("nav-active");
+}
+
+window.addEventListener("scroll", setActiveNav);
+setActiveNav();
+
 // *********************** Common Section
 // Debounce scroll event
 function debounce(func, wait) {
@@ -20,92 +52,51 @@ $(document).scroll(function () {
   $nav.toggleClass("see", $(this).scrollTop() > $nav.height());
 });
 
+// *********************** Tab Helper
+
+/**
+ * Generic tab switcher.
+ * @param {HTMLElement[]} tabs    - all tab button elements
+ * @param {HTMLElement[]} panels  - matching content panels
+ * @param {number}        index   - which tab to activate
+ * @param {object}        colors  - { active, inactive } style sets
+ */
+function activateTab(tabs, panels, index, colors) {
+  panels.forEach((p) => (p.style.display = "none"));
+  tabs.forEach((t, i) => {
+    const isActive = i === index;
+    t.style.backgroundColor = isActive ? colors.active.bg   : colors.inactive.bg;
+    t.style.borderColor     = isActive ? colors.active.border : colors.inactive.border;
+    t.style.color           = isActive ? colors.active.color  : colors.inactive.color;
+  });
+  panels[index].style.display = "block";
+}
+
 // *********************** About Section
 
-const intro = document.querySelector("#intro");
-const experience = document.querySelector("#experience");
-const education = document.querySelector("#education");
-const activities = document.querySelector("#activities");
-
-const introBasket = document.querySelector("#introBasket");
-const experienceBasket = document.querySelector("#experienceBasket");
-const educationBasket = document.querySelector("#educationBasket");
-const activitiesBasket = document.querySelector("#activitiesBasket");
-
-const removeDisplayAbout = () => {
-  introBasket.style.display = "none";
-  experienceBasket.style.display = "none";
-  educationBasket.style.display = "none";
-  activitiesBasket.style.display = "none";
+const aboutTabs = [
+  document.querySelector("#intro"),
+  document.querySelector("#experience"),
+  document.querySelector("#education"),
+  document.querySelector("#activities"),
+];
+const aboutPanels = [
+  document.querySelector("#introBasket"),
+  document.querySelector("#experienceBasket"),
+  document.querySelector("#educationBasket"),
+  document.querySelector("#activitiesBasket"),
+];
+const aboutColors = {
+  active:   { bg: "rgb(0,0,255)",   border: "rgb(255,255,255)", color: "rgb(255,255,255)" },
+  inactive: { bg: "rgb(255,255,255)", border: "rgb(0,0,255)",   color: "rgb(0,0,255)" },
 };
 
-intro.addEventListener("click", () => {
-  removeDisplayAbout();
-  introBasket.style.display = "block";
-  intro.style.backgroundColor = "rgb(0,0,255)";
-  intro.style.borderColor = "rgb(255,255,255)";
-  intro.style.color = "rgb(255,255,255)";
-  experience.style.backgroundColor = "rgb(255,255,255)";
-  experience.style.borderColor = "rgb(0,0,255)";
-  experience.style.color = "rgb(0,0,255)";
-  education.style.backgroundColor = "rgb(255,255,255)";
-  education.style.borderColor = "rgb(0,0,255)";
-  education.style.color = "rgb(0,0,255)";
-  activities.style.backgroundColor = "rgb(255,255,255)";
-  activities.style.borderColor = "rgb(0,0,255)";
-  activities.style.color = "rgb(0,0,255)";
+aboutTabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => activateTab(aboutTabs, aboutPanels, i, aboutColors));
 });
 
-education.addEventListener("click", () => {
-  removeDisplayAbout();
-  intro.style.backgroundColor = "rgb(255,255,255)";
-  intro.style.borderColor = "rgb(0,0,255)";
-  intro.style.color = "rgb(0,0,255)";
-  experience.style.backgroundColor = "rgb(255,255,255)";
-  experience.style.borderColor = "rgb(0,0,255)";
-  experience.style.color = "rgb(0,0,255)";
-  educationBasket.style.display = "block";
-  education.style.backgroundColor = "rgb(0,0,255)";
-  education.style.borderColor = "rgb(255,255,255)";
-  education.style.color = "rgb(255,255,255)";
-  activities.style.backgroundColor = "rgb(255,255,255)";
-  activities.style.borderColor = "rgb(0,0,255)";
-  activities.style.color = "rgb(0,0,255)";
-});
-
-activities.addEventListener("click", () => {
-  removeDisplayAbout();
-  intro.style.backgroundColor = "rgb(255,255,255)";
-  intro.style.borderColor = "rgb(0,0,255)";
-  intro.style.color = "rgb(0,0,255)";
-  experience.style.backgroundColor = "rgb(255,255,255)";
-  experience.style.borderColor = "rgb(0,0,255)";
-  experience.style.color = "rgb(0,0,255)";
-  education.style.backgroundColor = "rgb(255,255,255)";
-  education.style.borderColor = "rgb(0,0,255)";
-  education.style.color = "rgb(0,0,255)";
-  activitiesBasket.style.display = "block";
-  activities.style.backgroundColor = "rgb(0,0,255)";
-  activities.style.borderColor = "rgb(255,255,255)";
-  activities.style.color = "rgb(255,255,255)";
-});
-
-experience.addEventListener("click", () => {
-  removeDisplayAbout();
-  intro.style.backgroundColor = "rgb(255,255,255)";
-  intro.style.borderColor = "rgb(0,0,255)";
-  intro.style.color = "rgb(0,0,255)";
-  experienceBasket.style.display = "block";
-  experience.style.backgroundColor = "rgb(0,0,255)";
-  experience.style.borderColor = "rgb(255,255,255)";
-  experience.style.color = "rgb(255,255,255)";
-  education.style.backgroundColor = "rgb(255,255,255)";
-  education.style.borderColor = "rgb(0,0,255)";
-  education.style.color = "rgb(0,0,255)";
-  activities.style.backgroundColor = "rgb(255,255,255)";
-  activities.style.borderColor = "rgb(0,0,255)";
-  activities.style.color = "rgb(0,0,255)";
-});
+// Default: Introduction active
+activateTab(aboutTabs, aboutPanels, 0, aboutColors);
 
 var typed = new Typed(".typing", {
   strings: ["Student", "Programmer", "Developer", "Engineer"],
@@ -125,42 +116,29 @@ var typed = new Typed("#typing", {
 
 // *********************** Skills Section
 
-const languages = document.querySelector("#languages");
-const ides = document.querySelector("#ides");
-const dbs = document.querySelector("#dbs");
-const other = document.querySelector("#other");
-
-const languagesBasket = document.querySelector("#languagesBasket");
-const idesBasket = document.querySelector("#idesBasket");
-const dbsBasket = document.querySelector("#dbsBasket");
-const otherBasket = document.querySelector("#otherBasket");
-
-const removeDisplaySkills = () => {
-  languagesBasket.style.display = "none";
-  idesBasket.style.display = "none";
-  dbsBasket.style.display = "none";
-  otherBasket.style.display = "none";
+const skillsTabs = [
+  document.querySelector("#languages"),
+  document.querySelector("#dbs"),
+  document.querySelector("#ides"),
+  document.querySelector("#other"),
+];
+const skillsPanels = [
+  document.querySelector("#languagesBasket"),
+  document.querySelector("#dbsBasket"),
+  document.querySelector("#idesBasket"),
+  document.querySelector("#otherBasket"),
+];
+const skillsColors = {
+  active:   { bg: "rgb(0,0,255)",    border: "rgb(0,0,255)",   color: "rgb(255,255,255)" },
+  inactive: { bg: "rgb(255,255,255)", border: "rgb(0,0,0)",    color: "rgb(0,0,0)" },
 };
 
-languages.addEventListener("click", () => {
-  removeDisplaySkills();
-  languagesBasket.style.display = "block";
+skillsTabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => activateTab(skillsTabs, skillsPanels, i, skillsColors));
 });
 
-ides.addEventListener("click", () => {
-  removeDisplaySkills();
-  idesBasket.style.display = "block";
-});
-
-dbs.addEventListener("click", () => {
-  removeDisplaySkills();
-  dbsBasket.style.display = "block";
-});
-
-other.addEventListener("click", () => {
-  removeDisplaySkills();
-  otherBasket.style.display = "block";
-});
+// Default: Tech Stack active
+activateTab(skillsTabs, skillsPanels, 0, skillsColors);
 
 languagesIds = ['javalanguageProgress', 'springbootlanguageProgress', 'javascriptlanguageProgress', 'reactlanguageProgress', 'pythonlanguageProgress', 'mllanguageProgress', 'clanguageProgress']
 document.addEventListener("DOMContentLoaded", function() {
@@ -183,26 +161,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // *********************** Links Section
 
-const tech = document.querySelector("#techHeading");
-const social = document.querySelector("#socialHeading");
-
-const techBasket = document.querySelector("#techBasket");
-const socialBasket = document.querySelector("#socialBasket");
-
-const removeDisplayLinks = () => {
-  techBasket.style.display = "none";
-  socialBasket.style.display = "none";
+const linksTabs = [
+  document.querySelector("#techHeading"),
+  document.querySelector("#socialHeading"),
+];
+const linksPanels = [
+  document.querySelector("#techBasket"),
+  document.querySelector("#socialBasket"),
+];
+const linksColors = {
+  active:   { bg: "rgb(0,0,255)", border: "rgb(0,0,255)",   color: "rgb(255,255,255)" },
+  inactive: { bg: "rgb(0,0,0)",   border: "rgb(255,255,255)", color: "rgb(255,255,255)" },
 };
 
-tech.addEventListener("click", () => {
-  removeDisplayLinks();
-  techBasket.style.display = "block";
+linksTabs.forEach((tab, i) => {
+  tab.addEventListener("click", () => activateTab(linksTabs, linksPanels, i, linksColors));
 });
 
-social.addEventListener("click", () => {
-  removeDisplayLinks();
-  socialBasket.style.display = "block";
-});
+// Default: Tech Links active
+activateTab(linksTabs, linksPanels, 0, linksColors);
 
 // *********************** Contact Section
 

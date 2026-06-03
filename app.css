@@ -1,4 +1,6 @@
-/* ************************************** Common Section */
+/* ============================
+   ANIMATIONS
+   ============================ */
 
 @keyframes transitionIn {
   from {
@@ -11,39 +13,80 @@
   }
 }
 
+@keyframes transitionjava {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes transitionspringboot {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes transitionjavascript {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes transitionreact {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes transitionpython {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes transitionml {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes transitionc {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+/* ============================
+   GLOBAL
+   ============================ */
+
 html {
   animation: transitionIn 1s;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 p {
   font-family: "Poppins";
-}
-
-#scrollbtn {
-  display: none;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 1px blue solid;
-  background-color: aquamarine;
-}
-
-#scrollbtn:hover {
-  background-color: #0f0;
-  transition: 0.8s;
-  transform: scale(1.25);
-}
-
-#scrollbtn.see {
-  display: block;
-}
-
-#arrow_image {
-  height: 40px;
-  width: 40px;
 }
 
 h4 .rounded-pill {
@@ -55,22 +98,102 @@ h4 .rounded-pill {
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background-color: black;
   cursor: pointer;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #999;
 }
 
-/* **************************************** Nav Section */
+img.rounded-pill {
+  width: 300px;
+}
+
+/* ============================
+   SCROLL-TO-TOP BUTTON
+   ============================ */
+
+#scrollbtn {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px blue solid;
+  background-color: aquamarine;
+  z-index: 999;
+}
+
+#scrollbtn.see {
+  display: block;
+}
+
+#scrollbtn:hover {
+  background-color: #0f0;
+  transition: 0.8s;
+  transform: scale(1.25);
+}
+
+#arrow_image {
+  height: 40px;
+  width: 40px;
+}
+
+/* ============================
+   PARALLAX + SECTION OVERLAYS
+   ============================ */
+
+.parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.home-section,
+.services-section,
+.links-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+#about-section,
+#skills-section,
+#contact-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================
+   NAVBAR
+   ============================ */
+
+#navbar {
+  z-index: 999;
+}
+
+/* Remove all Bootstrap default toggler border/shadow globally */
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
 
 #navbar.scrolled {
   background-image: url("./images/4.jpeg") !important;
   transition: background-image 1s linear;
-  z-index: 1000;
 }
 
 #navtitle {
@@ -100,14 +223,23 @@ h4 .rounded-pill {
 
 #navlist li img {
   width: 30px;
-  display: none;
   height: 30px;
   margin: 5px;
+  display: none;
   border-radius: 50%;
 }
 
 #navlist li a {
   color: white;
+}
+
+#navlist li.nav-active {
+  background-color: crimson;
+}
+
+#navlist li.nav-active a {
+  color: white;
+  font-weight: 700;
 }
 
 #navlist li:hover {
@@ -117,31 +249,79 @@ h4 .rounded-pill {
 }
 
 @media (max-width: 993px) {
-  /* #navlist li img {
-    display: flex;
-    background-color: grey;
-  } */
-
   #navbar {
     background-image: url("./images/4.jpeg") !important;
+  }
+
+  #navtitle {
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 4px 12px;
+    border-width: 1px;
+  }
+
+  .navbar-toggler {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 8px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2C255%2C255%2C1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 
   #navlist {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8px 0 12px;
+    gap: 0;
   }
 
   #navlist li {
-    max-height: 25px;
+    max-height: none;
+    height: auto;
     border: none;
-    border-bottom: 1px white solid;
-    padding: 0px;
-    margin-bottom: 15px;
+    border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+    padding: 8px 20px;
+    margin: 0;
+    width: 70%;
+    font-size: 0.95rem;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    justify-content: center;
+  }
+
+  #navlist li:last-child {
+    border-bottom: none;
+  }
+
+  #navlist li a {
+    font-size: 0.95rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  #navlist li:hover {
+    transform: none;
+    background-color: rgba(220, 20, 60, 0.8);
+    border-radius: 6px;
   }
 }
 
-/* **************************************** Home Section */
+/* ============================
+   HOME SECTION
+   ============================ */
 
 #home-section {
   height: 100vh;
@@ -158,14 +338,18 @@ h4 .rounded-pill {
 
 @media (max-width: 650px) {
   #homeBox {
-    display: flex;
     justify-content: space-evenly;
   }
 }
 
+#line2 {
+  font-size: 90px;
+}
+
 #homeboxdetailsleft {
   margin-bottom: 10px;
-  min-width: 350px;
+  min-width: 0;
+  width: 100%;
   color: white;
   display: flex;
   border-left: 1px greenyellow solid;
@@ -175,7 +359,9 @@ h4 .rounded-pill {
   padding-left: 30px;
 }
 
-/* ********************************* About Section */
+/* ============================
+   ABOUT SECTION — HEADINGS
+   ============================ */
 
 #about-heading {
   font-family: "Montserrat";
@@ -198,6 +384,10 @@ h4 .rounded-pill {
   margin-right: 10px;
   font-family: "Roboto Slab";
 }
+
+/* ============================
+   ABOUT SECTION — TAB NAV
+   ============================ */
 
 #aboutdetails {
   padding: 15px;
@@ -227,85 +417,51 @@ h4 .rounded-pill {
 }
 
 #aboutdetailsBody {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-#downloadresumebtn,
-#viewresumebtn {
-  background-color: blue;
-}
+/* ============================
+   ABOUT — BASKET CONTAINERS
+   ============================ */
 
-#downloadresumebtn:hover,
-#viewresumebtn:hover {
-  transform: scale(1.05);
-}
-
-#introBasket {
-  width: 100%;
-  margin-top: 10px;
-}
-
-#experienceBasket {
-  width: 100%;
-  margin-top: 10px;
-  display: none;
-}
-
-#educationBasket {
-  width: 100%;
-  margin-top: 10px;
-  display: none;
-}
-
+#introBasket,
+#experienceBasket,
+#educationBasket,
 #activitiesBasket {
   width: 100%;
   margin-top: 10px;
+}
+
+#experienceBasket,
+#educationBasket,
+#activitiesBasket {
   display: none;
+}
+
+#introBasketData,
+#experienceBasketData,
+#educationBasketData,
+#activitiesBasketData {
+  height: 100%;
+  margin-bottom: 20px;
+  animation: transitionIn 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #introBasketData {
   width: 90vw;
-  height: 100%;
-  margin-bottom: 20px;
-  animation: transitionIn 1s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-
-#experienceBasketData {
+#experienceBasketData,
+#educationBasketData,
+#activitiesBasketData {
   width: 80vw;
-  height: 100%;
-  margin-bottom: 20px;
-  animation: transitionIn 1s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#educationBasketData {
-  width: 80vw;
-  height: 100%;
-  margin-bottom: 20px;
-  animation: transitionIn 1s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #activitiesBasketData {
-  width: 80vw;
-  height: 100%;
-  margin-bottom: 20px;
-  animation: transitionIn 1s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 50px;
 }
 
@@ -313,31 +469,9 @@ h4 .rounded-pill {
   border: none;
 }
 
-#highschoolDetails {
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#IntermediateDetails {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#postgraduationDetails {
-  margin-top: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#graduationDetails {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+/* ============================
+   ABOUT — INTRO CARD
+   ============================ */
 
 #introDetails {
   margin-top: 70px;
@@ -348,10 +482,85 @@ h4 .rounded-pill {
   align-items: center;
 }
 
+#introDetailsLeft {
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#introDetailsRight {
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-left: 1px black solid;
+}
+
+#aboutProfileImage {
+  width: 280px;
+  height: 350px;
+  border-radius: 2%;
+  box-shadow: 2px 2px 2px 2px;
+}
+
+#aboutIntroTitle {
+  font-family: "Red Hat Display";
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#viewresumebtn,
+#downloadresumebtn {
+  background-color: blue;
+}
+
+#viewresumebtn:hover,
+#downloadresumebtn:hover {
+  transform: scale(1.05);
+}
+
+/* ============================
+   ABOUT — ACTIVITIES
+   ============================ */
+
 #organiserDetails,
 #volunteerDetails {
   font-family: "Ubuntu";
   border-bottom: 1px black solid;
+}
+
+#volunteerDetails h2,
+#organiserDetails h2 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* ============================
+   EDUCATION SECTION
+   ============================ */
+
+#postgraduationDetails {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#graduationDetails,
+#IntermediateDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#highschoolDetails {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #highschoolLeft,
@@ -366,26 +575,6 @@ h4 .rounded-pill {
   border-bottom: 0.2px black solid;
 }
 
-#highschoolName,
-#IntermediateName,
-#collegeName {
-  font-weight: 700;
-  text-decoration: underline;
-  line-height: 40px;
-}
-
-#aboutIntroTitle {
-  font-family: "Red Hat Display";
-  font-size: 40px;
-  font-weight: 600;
-}
-
-#volunteerDetails h2,
-#organiserDetails h2 {
-  font-size: 50px;
-  font-weight: 600;
-}
-
 #highschoolRight,
 #IntermediateRight,
 #graduationRight,
@@ -398,8 +587,78 @@ h4 .rounded-pill {
   border-bottom: 0.2px black solid;
 }
 
-img.rounded-pill {
-  width: 300px;
+/* Degree-type label — consistent across all 4 education entries */
+#postgraduationLeft h2.card-title,
+#graduationRight h2.card-title,
+#IntermediateLeft h2.card-title,
+#highschoolRight h2.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Spartan";
+  margin-bottom: 6px;
+}
+
+/* Institution name — consistent across all 4 education entries */
+#collegeName,
+#graduationCollegeName,
+#IntermediateName,
+#highschoolName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  line-height: 1.4;
+  font-family: "Spartan";
+  margin-bottom: 6px;
+}
+
+/* Location line */
+#collegeAddress,
+#graduationCollegeAddress,
+#IntermediateAddress,
+#highschoolAddress {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Timestamp line */
+#collegeTimestamp,
+#graduationCollegeTimestamp,
+#IntermediateTimestamp,
+#highschoolTimestamp {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* Marks / CGPA line */
+#collegeMarks,
+#graduationCollegeMarks,
+#IntermediateMarks,
+#highschoolMarks {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+/* Degree type line (display-10) */
+#postgraduationLeft .display-10,
+#graduationRight .display-10,
+#IntermediateLeft .display-10,
+#highschoolRight .display-10 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Subject line (display-12) */
+#postgraduationSubjects,
+#graduationSubjects,
+#intermediateSubjects,
+#highschoolSubjects {
+  font-size: 0.8rem;
+  color: #666;
 }
 
 #highSchoolImage,
@@ -412,12 +671,9 @@ img.rounded-pill {
   border-radius: 50%;
 }
 
-/* Experience Section Styles (Mirroring Education) */
-#experienceBasket {
-  width: 100%;
-  margin-top: 10px;
-  display: none;
-}
+/* ============================
+   EXPERIENCE SECTION
+   ============================ */
 
 #cdotDetails,
 #infosysDetails,
@@ -430,39 +686,86 @@ img.rounded-pill {
 }
 
 #cdotLeft,
-#infosysLeft,
-#ciscoLeft,
 #intelLeft {
   min-width: 320px;
-  text-align: right;
+  text-align: center;
   font-family: "Spartan";
   border: none;
-  border-right: 1px black solid;
+  border-right: 1px solid black;
+  border-bottom: 0.2px black solid;
+}
+
+#infosysLeft,
+#ciscoLeft {
+  min-width: 320px;
+  text-align: left;
+  font-family: "Spartan";
+  border: none;
+  border-right: 1px solid black;
   border-bottom: 0.2px black solid;
 }
 
 #cdotRight,
-#infosysRight,
-#ciscoRight,
 #intelRight {
   min-width: 320px;
   text-align: left;
   font-family: "Spartan";
   border: none;
-  border-left: 1px black solid;
+  border-left: 1px solid black;
   border-bottom: 0.2px black solid;
 }
 
-#cdotName,
-#infosysName,
-#ciscoName,
-#intelName {
-  font-weight: 700;
-  text-decoration: underline;
-  line-height: 40px;
+#infosysRight,
+#ciscoRight {
+  min-width: 320px;
+  text-align: center;
+  font-family: "Spartan";
+  border: none;
+  border-left: 1px solid black;
+  border-bottom: 0.2px black solid;
 }
 
-/* Company Image Styling */
+/* Consistent company name across all four experience entries */
+#intelLeft h2.card-title,
+#ciscoRight h2.card-title,
+#cdotLeft h2.card-title,
+#infosysRight h2.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: "Spartan";
+}
+
+/* Consistent location line */
+#intelLeft .display-8,
+#ciscoRight .display-8,
+#cdotLeft .display-8,
+#infosysRight .display-8 {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Consistent role line */
+#intelLeft .display-10,
+#ciscoRight .display-10,
+#cdotLeft .display-10,
+#infosysRight .display-10 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Consistent date line */
+#intelLeft .display-12,
+#ciscoRight .display-12,
+#cdotLeft .display-12,
+#infosysRight .display-12 {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
 #cdotImage,
 #infosysImage,
 #ciscoImage,
@@ -473,75 +776,11 @@ img.rounded-pill {
   border-radius: 50%;
 }
 
-/* Project Section Styling */
-.project-section {
-  font-family: "Spartan";
-  margin: 15px 0;
-}
-
-.project-section ul {
-  padding-left: 20px;
-}
-
-.project-section li {
-  margin: 8px 0;
-  line-height: 1.4;
-}
-
-/* Button Consistency */
-#experienceBasket .btn-success {
-  font-family: "Ubuntu";
-  padding: 8px 25px;
-  margin-top: 10px;
-}
-
-/* Updated CSS for Experience Section */
-/* C-DOT Styling */
-#cdotLeft,
-#intelLeft {
-  text-align: center;
-  border-right: 1px solid black;
-}
-
-#cdotRight .card-title abbr,
-#intelRight .card-title abbr {
-  font-size: 1.8rem;
-  text-decoration: none;
-}
-
-.project-description {
-  font-family: "Spartan";
-  line-height: 1.6;
-  margin: 15px 0;
-  text-align: justify;
-  padding-right: 20px;
-}
-
-/* Infosys Restructuring */
-#infosysLeft,
-#ciscoLeft {
-  border-right: 1px solid black;
-  text-align: left;
-}
-
-#infosysRight,
-#ciscoRight {
-  text-align: center;
-  border-left: 1px solid black;
-}
-
-#infosysRight .card-title,
-#ciscoRight .card-title {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
 #infosysImage,
 #ciscoImage {
   margin-bottom: 20px;
 }
 
-/* Button Positioning */
 #cdotLeft .btn-success,
 #infosysRight .btn-success,
 #ciscoRight .btn-success,
@@ -550,61 +789,12 @@ img.rounded-pill {
   width: 120px;
 }
 
-/* Project Title Styling */
-.project-section h5 {
-  font-family: "Red Hat Display";
-  font-size: 1.4rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #27ae60;
-  padding-bottom: 5px;
-  display: inline-block;
-  font-weight: bold;
+#experienceBasket .btn-success {
+  font-family: "Ubuntu";
+  padding: 8px 25px;
+  margin-top: 10px;
 }
 
-.project-description {
-  font-family: "Spartan";
-  line-height: 1.6;
-  margin: 15px 0;
-  text-align: justify;
-  padding-right: 20px;
-  color: #222; /* Lighter text for less emphasis */
-}
-
-.bold {
-  font-weight: bolder;
-  color: #000; /* Stronger contrast for emphasis */
-  font-size: 1.05rem;
-}
-
-.italic {
-  font-style: italic;
-  color: #222; /* Slightly stronger than the base text */
-}
-
-/* Add to your CSS file */
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-}
-
-.project-link:hover {
-  color: #0000ff;
-  /* Matching your theme color */
-}
-
-.project-link strong {
-  text-decoration: underline;
-  text-decoration-color: #27ae60;
-  text-underline-offset: 3px;
-}
-
-.project-link:hover strong {
-  color: #0000ff;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   #cdotDetails,
   #infosysDetails {
@@ -625,33 +815,75 @@ img.rounded-pill {
   }
 }
 
-#introDetailsLeft {
-  min-width: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  /* border-right: 1px black solid; */
+/* ============================
+   SHARED PROJECT TYPOGRAPHY
+   ============================ */
+
+.project-section {
+  font-family: "Spartan";
+  margin: 15px 0;
 }
 
-#introDetailsRight {
-  min-width: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-left: 1px black solid;
+.project-section ul {
+  padding-left: 20px;
 }
 
-#aboutProfileImage {
-  width: 280px;
-  height: 350px;
-  border-radius: 2%;
-  /* border: 1px white solid; */
-  box-shadow: 2px 2px 2px 2px;
+.project-section li {
+  margin: 8px 0;
+  line-height: 1.4;
 }
 
-/* ******************************** Services Section */
+.project-section h5 {
+  font-family: "Red Hat Display";
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.project-description {
+  font-family: "Spartan";
+  line-height: 1.6;
+  margin: 15px 0;
+  text-align: justify;
+  padding-right: 20px;
+  color: #222;
+}
+
+.bold {
+  font-weight: bolder;
+  color: #000;
+  font-size: 1.05rem;
+}
+
+.italic {
+  font-style: italic;
+  color: #222;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.project-link strong {
+  text-decoration: underline;
+  text-decoration-color: #27ae60;
+  text-underline-offset: 3px;
+}
+
+.project-link:hover,
+.project-link:hover strong {
+  color: #00f;
+}
+
+/* ============================
+   PROJECTS SECTION
+   ============================ */
 
 #services-section {
   color: white;
@@ -688,172 +920,17 @@ img.rounded-pill {
   align-items: center;
 }
 
-/* #androiddetails,
-#webdetails {
-  background-color: #222;
-  height: 55vh;
-  padding: 5px;
-  min-width: 320px;
-  border: none;
-  margin-bottom: 150px;
-  transition: 0.5s;
-  border-bottom-left-radius: 20%;
-  border-bottom: 2px blue solid;
-  border-right: 2px blue solid;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 1200px) {
-  #androiddetails,
-  #webdetails {
-    height: 63vh;
-  }
-}
-
-#androiddetails:hover,
-#webdetails:hover {
-  transform: scale(1.05);
-  background-color: blue;
-  border-bottom: 2px white solid;
-  border-right: 2px white solid;
-}
-
-#androiddetails div,
-#webdetails div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#androiddetails img,
-#webdetails img {
-  background-color: blue;
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-}
-
-#webdetails img {
-  padding: 20px;
-}
-
-#androiddetails div h5,
-#webdetails div h5 {
-  font-family: "Montserrat";
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-#androiddetails div #text,
-#webdetails div #text {
-  font-family: "Ubuntu";
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-} */
-
-#parkinsondetails,
-#truthlensdetails,
-#yelpcampdetails {
-  background-color: #222;
-  height: 65vh;
-  padding: 5px;
-  min-width: 320px;
-  border: none;
-  margin-bottom: 150px;
-  transition: 0.5s;
-  border-bottom-left-radius: 20%;
-  border-bottom: 2px blue solid;
-  border-right: 2px blue solid;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 1200px) {
-  #parkinsondetails,
-  #truthlensdetails,
-  #yelpcampdetails {
-    height: 63vh;
-  }
-}
-
-#parkinsondetails:hover,
-#truthlensdetails:hover,
-#yelpcampdetails:hover {
-  transform: scale(1.05);
-  background-color: blue;
-  border-bottom: 2px white solid;
-  border-right: 2px white solid;
-}
-
-#parkinsondetails div,
-#truthlensdetails div,
-#yelpcampdetails div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#parkinsondetails .project-initial,
-#truthlensdetails .project-initial,
-#yelpcampdetails .project-initial {
-  background-color: blue;
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  font-weight: 900;
-  color: white;
-  text-transform: uppercase;
-}
-
-#parkinsondetails div h5,
-#truthlensdetails div h5,
-#yelpcampdetails div h5 {
-  font-family: "Montserrat";
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-#parkinsondetails div #text,
-#truthlensdetails div #text,
-#yelpcampdetails div #text {
-  font-family: "Ubuntu";
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-#servicesdetails {
-  margin-top: 150px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 #parkinsondetails,
 #truthlensdetails,
 #yelpcampdetails {
   background-color: #222;
   padding: 20px;
-  /* Increased padding for better spacing */
   min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
   border: none;
   margin-bottom: 50px;
-  /* Reduced margin for mobile view */
   transition: 0.5s;
   border-bottom-left-radius: 20%;
   border-bottom: 2px blue solid;
@@ -861,24 +938,6 @@ img.rounded-pill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  /* Full width on mobile */
-  max-width: 400px;
-  /* Limit maximum width for larger screens */
-  height: auto;
-  /* Auto height to fit content */
-}
-
-@media (max-width: 768px) {
-  #parkinsondetails,
-  #truthlensdetails,
-  #yelpcampdetails {
-    margin-bottom: 30px;
-    /* Further reduced margin for mobile */
-    height: auto;
-    /* Auto height to fit content */
-    max-width: 80%;
-  }
 }
 
 #parkinsondetails:hover,
@@ -905,15 +964,12 @@ img.rounded-pill {
   background-color: blue;
   border-radius: 50%;
   height: 100px;
-  /* Reduced size for mobile */
   width: 100px;
-  /* Reduced size for mobile */
   margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  /* Reduced font size for mobile */
   font-weight: 900;
   color: white;
   text-transform: uppercase;
@@ -924,34 +980,22 @@ img.rounded-pill {
 #yelpcampdetails div h5 {
   font-family: "Montserrat";
   font-size: 20px;
-  /* Reduced font size for mobile */
   text-align: center;
   margin-bottom: 15px;
-  /* Reduced margin for mobile */
 }
 
-#parkinsondetails div #text,
-#truthlensdetails div #text,
-#yelpcampdetails div #text {
-  font-family: "Ubuntu";
-  font-size: 14px;
-  /* Reduced font size for mobile */
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+@media (max-width: 768px) {
+  #parkinsondetails,
+  #truthlensdetails,
+  #yelpcampdetails {
+    margin-bottom: 30px;
+    max-width: 80%;
+  }
 }
 
-/* Button styling */
-.btn-success {
-  margin-top: 15px;
-  /* Added margin for better spacing */
-  width: 100%;
-  /* Full width on mobile */
-  max-width: 200px;
-  /* Limit maximum width */
-}
-
-/* ************************************* Skills Section */
+/* ============================
+   SKILLS SECTION — HEADINGS + TAB NAV
+   ============================ */
 
 #skills-heading {
   font-family: "Montserrat";
@@ -1012,6 +1056,10 @@ img.rounded-pill {
   padding-bottom: 40px;
 }
 
+/* ============================
+   SKILLS — PROGRESS BARS
+   ============================ */
+
 #languagesBasket {
   animation: transitionIn 1s;
 }
@@ -1046,172 +1094,47 @@ img.rounded-pill {
   position: relative;
 }
 
-@keyframes transitionjava {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 90%;
-  }
-}
-
-#javalanguageProgress::before {
+#javalanguageProgress::before,
+#springbootlanguageProgress::before,
+#javascriptlanguageProgress::before,
+#reactlanguageProgress::before,
+#pythonlanguageProgress::before,
+#mllanguageProgress::before,
+#clanguageProgress::before {
+  content: "";
   width: 0%;
   background-color: blue;
   height: 8px;
   position: absolute;
   left: 0;
   top: 0;
-  content: "";
 }
 
 #javalanguageProgress.animate::before {
   animation: transitionjava 1s forwards;
 }
-
-@keyframes transitionspringboot {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 80%;
-  }
-}
-
-#springbootlanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #springbootlanguageProgress.animate::before {
   animation: transitionspringboot 1s forwards;
 }
-
-@keyframes transitionjavascript {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 90%;
-  }
-}
-
-#javascriptlanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #javascriptlanguageProgress.animate::before {
   animation: transitionjavascript 1s forwards;
 }
-
-@keyframes transitionreact {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 90%;
-  }
-}
-
-#reactlanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #reactlanguageProgress.animate::before {
   animation: transitionreact 1s forwards;
 }
-
-@keyframes transitionpython {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 70%;
-  }
-}
-
-#pythonlanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #pythonlanguageProgress.animate::before {
   animation: transitionpython 1s forwards;
 }
-
-@keyframes transitionml {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 80%;
-  }
-}
-
-#mllanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #mllanguageProgress.animate::before {
   animation: transitionml 1s forwards;
 }
-
-@keyframes transitionc {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 70%;
-  }
-}
-
-#clanguageProgress::before {
-  width: 0%;
-  background-color: blue;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-}
-
 #clanguageProgress.animate::before {
   animation: transitionc 1s forwards;
 }
+
+/* ============================
+   SKILLS — IDEs
+   ============================ */
 
 #idesBasket {
   display: none;
@@ -1230,23 +1153,35 @@ img.rounded-pill {
 
 #allidesDetails div {
   margin: 10px;
-  /* min-width: 250px; */
-  /* color: white; */
-  /* background-color: dodgerblue; */
   border: 1px black solid;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   border-radius: 10%;
+  width: 100%;
+  max-width: 250px;
 }
 
 #allidesDetails div:hover {
   transform: scale(1.05);
-  /* background-color: blue; */
-  /* color: white; */
+}
+
+#allidesDetails div img {
+  width: 100px;
+  height: 100px;
+  border: 2px black solid;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+#allidesDetails div h5 {
+  font-family: "Nunito";
+  text-align: center;
+  font-size: 1rem;
 }
 
 #allidesDetails ul {
@@ -1263,21 +1198,25 @@ img.rounded-pill {
   color: blue;
 }
 
-#allidesDetails div img {
-  width: 150px;
-  height: 150px;
-  border: 2px black solid;
-  border-radius: 50%;
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
+@media (max-width: 768px) {
+  #allidesDetails {
+    flex-direction: column;
+  }
+  #allidesDetails div {
+    max-width: 50%;
+  }
+  #allidesDetails div img {
+    width: 80px;
+    height: 80px;
+  }
+  #allidesDetails div h5 {
+    font-size: 0.9rem;
+  }
 }
 
-#allidesDetails div h5 {
-  font-family: "Nunito";
-  min-width: 130px;
-  text-align: center;
-}
+/* ============================
+   SKILLS — DATABASES
+   ============================ */
 
 #dbsBasket {
   display: none;
@@ -1294,11 +1233,6 @@ img.rounded-pill {
   align-items: center;
 }
 
-#webDBTitle {
-  text-decoration: underline;
-  font-family: "Oswald";
-}
-
 #webdbs div {
   padding: 20px;
   margin: 10px;
@@ -1307,7 +1241,6 @@ img.rounded-pill {
   color: blue;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   transition: 0.5s;
@@ -1316,7 +1249,6 @@ img.rounded-pill {
 
 #webdbs div:hover {
   transform: scale(1.05);
-  /* background-color: blue; */
 }
 
 #webdbs div img {
@@ -1332,12 +1264,14 @@ img.rounded-pill {
 #webdbs div h5 {
   font-family: "Nunito";
   border-top: 1px black solid;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 10px;
+  padding: 10px 50px 0;
   margin: 10px;
   text-align: center;
 }
+
+/* ============================
+   SKILLS — OTHER
+   ============================ */
 
 #otherBasket {
   display: none;
@@ -1347,10 +1281,7 @@ img.rounded-pill {
 }
 
 #otherBasket div {
-  /* background-color: dodgerblue; */
-  /* border-top: 1px black solid; */
   border-bottom: 1px black solid;
-  /* color: white; */
   display: flex;
   margin: 20px;
   flex-direction: row;
@@ -1382,96 +1313,14 @@ img.rounded-pill {
 }
 
 #otherBasket div ul li {
-  /* background-color: dodgerblue; */
   text-align: center;
   font-weight: 400;
   font-family: "Montserrat";
 }
 
-#allidesDetails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#allidesDetails div {
-  margin: 10px;
-  border: 1px black solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10%;
-  width: 100%;
-  /* Ensure full width on mobile */
-  max-width: 250px;
-  /* Limit maximum width for larger screens */
-}
-
-#allidesDetails div:hover {
-  transform: scale(1.05);
-}
-
-#allidesDetails ul {
-  background-color: white;
-  margin: 10px;
-  color: black;
-  font-weight: 500;
-  font-family: "Montserrat";
-  border: 1px black solid;
-}
-
-#allidesDetails ul li {
-  text-align: center;
-  color: blue;
-}
-
-#allidesDetails div img {
-  width: 100px;
-  /* Adjust image size for mobile */
-  height: 100px;
-  border: 2px black solid;
-  border-radius: 50%;
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
-}
-
-#allidesDetails div h5 {
-  font-family: "Nunito";
-  text-align: center;
-  font-size: 1rem;
-  /* Adjust font size for mobile */
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-  #allidesDetails {
-    flex-direction: column;
-    /* Stack items vertically on mobile */
-  }
-
-  #allidesDetails div {
-    max-width: 50%;
-    /* Full width on mobile */
-  }
-
-  #allidesDetails div img {
-    width: 80px;
-    /* Smaller images for mobile */
-    height: 80px;
-  }
-
-  #allidesDetails div h5 {
-    font-size: 0.9rem;
-    /* Smaller font size for mobile */
-  }
-}
-
-/* * ************************************* Links Section */
+/* ============================
+   LINKS SECTION
+   ============================ */
 
 #links-section {
   color: white;
@@ -1531,6 +1380,8 @@ img.rounded-pill {
 
 #linksBody {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #techBasket {
@@ -1544,16 +1395,7 @@ img.rounded-pill {
   display: none;
 }
 
-#techBasketData {
-  margin-bottom: 20px;
-  animation: transitionIn 1s;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
+#techBasketData,
 #socialBasketData {
   margin-bottom: 20px;
   animation: transitionIn 1s;
@@ -1610,7 +1452,13 @@ img.rounded-pill {
   height: 70px;
 }
 
-/* ***************************** Contact Section */
+/* ============================
+   CONTACT SECTION
+   ============================ */
+
+#contact-section {
+  background-color: #eee;
+}
 
 #contact-heading {
   font-family: "Montserrat";
@@ -1640,10 +1488,6 @@ img.rounded-pill {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-#contact-section {
-  background-color: #eee;
 }
 
 address a {
@@ -1722,7 +1566,9 @@ address a img {
   border-radius: 10%;
 }
 
-/* * Common Section */
+/* ============================
+   FOOTER
+   ============================ */
 
 .footer {
   position: -webkit-sticky;
@@ -1736,43 +1582,820 @@ address a img {
   z-index: 1000;
 }
 
-/* Add this CSS */
-.parallax-section {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  z-index: 0;
-  /* Ensure content is above the background */
+/* ============================
+   RESPONSIVE — TABLET (≤ 992px)
+   ============================ */
+
+@media (max-width: 992px) {
+  /* Home */
+  #line2 {
+    font-size: 60px !important;
+  }
+
+  /* About tab nav — allow wrapping */
+  #aboutdetails {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Education / Experience two-column cards → single column */
+  #postgraduationDetails,
+  #graduationDetails,
+  #IntermediateDetails,
+  #highschoolDetails,
+  #cdotDetails,
+  #infosysDetails,
+  #ciscoDetails,
+  #intelDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #highschoolLeft,
+  #IntermediateLeft,
+  #graduationLeft,
+  #postgraduationLeft,
+  #highschoolRight,
+  #IntermediateRight,
+  #graduationRight,
+  #postgraduationRight,
+  #cdotLeft,
+  #cdotRight,
+  #infosysLeft,
+  #infosysRight,
+  #ciscoLeft,
+  #ciscoRight,
+  #intelLeft,
+  #intelRight {
+    min-width: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+
+  /* Intro card */
+  #introDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #introDetailsLeft,
+  #introDetailsRight {
+    min-width: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #aboutProfileImage {
+    width: 200px;
+    height: 250px;
+  }
+
+  /* Skills tab nav */
+  #skillsdetails {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Links cards smaller min-width */
+  #techBasketData a,
+  #socialBasketData a {
+    min-width: 200px;
+  }
 }
 
-/* Fix overlapping content */
-.home-section,
-.services-section,
-.links-section {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Optional: Add overlay for readability */
-  background-blend-mode: multiply;
-}
+/* ============================
+   RESPONSIVE — MOBILE (≤ 576px)
+   ============================ */
 
-/* Ensure dynamic content has proper z-index */
-#about-section,
-#skills-section,
-#contact-section {
-  position: relative;
-  z-index: 1;
-  /* Content above parallax sections */
-}
+@media (max-width: 576px) {
+  /* ---- Global ---- */
+  /* Disable parallax — broken on iOS Safari */
+  .parallax-section {
+    background-attachment: scroll;
+  }
 
-/* Navbar */
-#navbar {
-  z-index: 999;
-  /* Higher than parallax sections */
-}
+  /* ---- Navbar ---- */
+  /* Expand collapsed nav items height so text isn't clipped */
+  #navlist li {
+    max-height: none;
+    padding: 6px 0;
+  }
 
-/* Scroll Button */
-#scrollbtn {
-  z-index: 999;
-  /* Higher than parallax sections */
+  /* ---- Home ---- */
+  #home-section {
+    height: 50vh;
+    min-height: unset;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 0 40px 0;
+  }
+
+  #homecontainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: auto;
+    padding: 0 20px;
+  }
+
+  #homeBox {
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  #homeboxdetailsleft {
+    padding-left: 20px;
+    padding-top: 0;
+    border-left: 3px greenyellow solid;
+    margin-bottom: 0;
+  }
+
+  #line1 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  #line2 {
+    font-size: 38px !important;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  #line3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  /* CTA button — auto width, centered */
+  #line4 {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #line4 a.btn {
+    display: inline-block;
+    width: auto;
+    padding: 10px 28px !important;
+    font-size: 0.85rem !important;
+    text-align: center;
+  }
+
+  /* ---- Section headings ---- */
+  #about-heading,
+  #skills-heading,
+  #contact-heading {
+    padding-top: 80px;
+    font-size: 1.8rem;
+  }
+
+  #services-heading {
+    padding-top: 80px;
+    font-size: 1.8rem;
+  }
+  #links-heading {
+    margin-top: 80px;
+    font-size: 1.8rem;
+  }
+
+  /* ---- About — tab nav ---- */
+  #aboutdetails {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 16px;
+    gap: 6px;
+  }
+
+  /* Each tab full width, compact touch target, override Bootstrap col-2 */
+  #aboutdetails div {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    min-height: 36px;
+    min-width: unset;
+    margin-bottom: 0;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  /* ---- About — intro card ---- */
+  #introDetails {
+    margin-top: 16px;
+  }
+
+  #introBasketData {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  #introDetailsLeft,
+  #introDetailsRight {
+    padding: 8px 0;
+  }
+
+  #aboutProfileImage {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto 12px;
+    display: block;
+  }
+
+  #aboutIntroTitle {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Shrink body text inside intro card */
+  #introDetailsRight .card-body {
+    padding: 8px 12px;
+  }
+  #introDetailsRight blockquote {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  #introDetailsRight p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  #introDetailsRight .display-8 {
+    font-size: 0.8rem;
+  }
+
+  /* Resume buttons — stack, full width */
+  #viewresumebtn,
+  #downloadresumebtn {
+    display: block;
+    width: 90%;
+    margin: 6px auto !important;
+    text-align: center;
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+  }
+
+  /* ---- Work Experience — reorder so company info always appears first ---- */
+  /* Intel & C-DOT: company info already on the left (DOM first) — no change needed */
+  /* Cisco & Infosys: description is DOM-first, company info is DOM-second → flip */
+  #ciscoDetails,
+  #infosysDetails {
+    flex-direction: column;
+  }
+
+  #ciscoRight,
+  #infosysRight {
+    order: -1;
+  } /* company card → top */
+  #ciscoLeft,
+  #infosysLeft {
+    order: 1;
+  } /* description  → bottom */
+
+  /* Education — degree label panel is DOM-second for graduation & highschool → flip */
+  #graduationDetails,
+  #highschoolDetails {
+    flex-direction: column;
+  }
+
+  #graduationRight,
+  #highschoolRight {
+    order: -1;
+  } /* degree label → top */
+  #graduationLeft,
+  #highschoolLeft {
+    order: 1;
+  } /* institution details → bottom */
+  /* postgraduation & intermediate: degree label already DOM-first → no change needed */
+
+  /* ---- Work Experience ---- */
+  #experienceBasketData {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  #intelDetails,
+  #ciscoDetails,
+  #cdotDetails,
+  #infosysDetails {
+    margin-bottom: 16px;
+  }
+
+  #intelLeft,
+  #intelRight,
+  #ciscoLeft,
+  #ciscoRight,
+  #cdotLeft,
+  #cdotRight,
+  #infosysLeft,
+  #infosysRight {
+    padding: 8px 10px;
+  }
+
+  /* Company name */
+  #intelLeft h2.card-title,
+  #ciscoRight h2.card-title,
+  #cdotLeft h2.card-title,
+  #infosysRight h2.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
+  /* Location + role */
+  #intelLeft .display-8,
+  #ciscoRight .display-8,
+  #cdotLeft .display-8,
+  #infosysRight .display-8,
+  #intelLeft .display-10,
+  #ciscoRight .display-10,
+  #cdotLeft .display-10,
+  #infosysRight .display-10 {
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+  }
+
+  /* Date */
+  #intelLeft .display-12,
+  #ciscoRight .display-12,
+  #cdotLeft .display-12,
+  #infosysRight .display-12 {
+    font-size: 0.72rem;
+  }
+
+  .project-section h5 {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  .project-description {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    padding-right: 0;
+    text-align: left;
+  }
+  .project-section li {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    margin: 4px 0;
+    text-align: left;
+  }
+  .bold {
+    font-size: 0.75rem;
+  }
+  .italic {
+    font-size: 0.75rem;
+  }
+
+  #cdotImage,
+  #infosysImage,
+  #ciscoImage,
+  #intelImage {
+    display: block;
+    margin: 0 auto 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #cdotLeft .btn-success,
+  #infosysRight .btn-success,
+  #ciscoRight .btn-success,
+  #intelLeft .btn-success {
+    font-size: 0.8rem;
+    padding: 4px 16px;
+    width: auto;
+    margin-top: 8px;
+  }
+
+  /* ---- Education ---- */
+  #educationBasketData {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  #postgraduationDetails,
+  #graduationDetails,
+  #IntermediateDetails,
+  #highschoolDetails {
+    margin-bottom: 8px;
+  }
+
+  #highschoolLeft,
+  #IntermediateLeft,
+  #graduationLeft,
+  #postgraduationLeft,
+  #highschoolRight,
+  #IntermediateRight,
+  #graduationRight,
+  #postgraduationRight {
+    padding: 8px 10px;
+  }
+
+  /* Degree label */
+  #postgraduationLeft h2.card-title,
+  #graduationRight h2.card-title,
+  #IntermediateLeft h2.card-title,
+  #highschoolRight h2.card-title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  /* Degree type */
+  #postgraduationLeft .display-10,
+  #graduationRight .display-10,
+  #IntermediateLeft .display-10,
+  #highschoolRight .display-10 {
+    font-size: 0.75rem;
+  }
+
+  /* Subject */
+  #postgraduationSubjects,
+  #graduationSubjects,
+  #intermediateSubjects,
+  #highschoolSubjects {
+    font-size: 0.7rem;
+  }
+
+  /* Institution name */
+  #collegeName,
+  #graduationCollegeName,
+  #IntermediateName,
+  #highschoolName {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  /* Location */
+  #collegeAddress,
+  #graduationCollegeAddress,
+  #IntermediateAddress,
+  #highschoolAddress {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+  }
+
+  /* Timestamp */
+  #collegeTimestamp,
+  #graduationCollegeTimestamp,
+  #IntermediateTimestamp,
+  #highschoolTimestamp {
+    font-size: 0.7rem;
+  }
+
+  /* Marks */
+  #collegeMarks,
+  #graduationCollegeMarks,
+  #IntermediateMarks,
+  #highschoolMarks {
+    font-size: 0.78rem;
+  }
+
+  /* Description */
+  #postgraduationRight p,
+  #graduationLeft p,
+  #IntermediateRight p,
+  #highschoolLeft p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  #highSchoolImage,
+  #graduationImage,
+  #postgraduationImage,
+  #IntermediateImage {
+    display: block;
+    margin: 0 auto 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ---- Activities ---- */
+  #activitiesBasketData {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  #organiserDetails,
+  #volunteerDetails {
+    padding: 12px 10px;
+  }
+
+  #volunteerDetails h2,
+  #organiserDetails h2 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+
+  #organiserDetails p,
+  #volunteerDetails p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  #organiserDetails .btn,
+  #volunteerDetails .btn {
+    font-size: 0.8rem;
+    padding: 5px 14px;
+  }
+
+  /* ---- Line-break dividers ---- */
+  img.rounded-pill {
+    width: 90%;
+  }
+
+  /* ---- Projects ---- */
+  #servicesdetails {
+    margin-top: 30px;
+    gap: 16px;
+    padding: 0 12px 30px;
+  }
+
+  #parkinsondetails,
+  #truthlensdetails,
+  #yelpcampdetails {
+    max-width: 85%;
+    width: 85%;
+    margin-bottom: 0;
+    padding: 14px 12px;
+    border-bottom-left-radius: 8%;
+  }
+
+  #parkinsondetails .project-initial,
+  #truthlensdetails .project-initial,
+  #yelpcampdetails .project-initial {
+    width: 63px;
+    height: 63px;
+    font-size: 1.8rem;
+    margin: 6px auto;
+  }
+
+  #parkinsondetails div h5,
+  #truthlensdetails div h5,
+  #yelpcampdetails div h5 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  #parkinsondetails .card-text,
+  #truthlensdetails .card-text,
+  #yelpcampdetails .card-text {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  #parkinsondetails .btn-success,
+  #truthlensdetails .btn-success,
+  #yelpcampdetails .btn-success {
+    font-size: 0.8rem;
+    padding: 5px 16px;
+    margin-top: 8px;
+    width: auto;
+  }
+
+  /* ---- Skills — tab nav ---- */
+  #skillsdetails {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    margin-top: 20px;
+    padding: 0 36px;
+  }
+
+  #skillsdetails div {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    min-height: 36px;
+    min-width: unset;
+    border: 2px black solid !important;
+    margin-bottom: 0;
+    padding: 5px 12px;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  /* ---- Skills — progress bars ---- */
+  #skillsdetailsBody {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #languagesBasket {
+    padding: 0 36px;
+  }
+  #dbsBasket {
+    padding: 0 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  #idesBasket {
+    padding: 0 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  #otherBasket {
+    padding: 0 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  #weblanguages {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  #weblanguages div {
+    min-width: unset;
+    width: 100%;
+    margin: 0;
+  }
+
+  .languageName {
+    font-size: 0.78rem;
+  }
+  .languagepercentage {
+    font-size: 0.78rem;
+  }
+
+  /* ---- Skills — databases ---- */
+  #dbsBasket {
+    padding: 0 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  #webdbs div {
+    min-width: unset;
+    width: 85%;
+    padding: 12px;
+    border-radius: 8%;
+  }
+
+  #webdbs div img {
+    width: 60px;
+    height: 50px;
+    padding: 6px;
+    margin: 6px;
+  }
+
+  #webdbs div h5 {
+    font-size: 0.8rem;
+    padding: 6px 20px 0;
+  }
+
+  /* ---- Skills — IDEs ---- */
+  #idesBasket {
+    padding: 0 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  #allidesDetails div {
+    max-width: 70%;
+  }
+
+  #allidesDetails div img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #allidesDetails div h5 {
+    font-size: 0.8rem;
+  }
+
+  /* ---- Skills — Other ---- */
+  #otherBasket {
+    padding: 0 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  #otherBasket div {
+    margin: 10px 0;
+  }
+
+  #otherBasket div h4 {
+    font-size: 0.82rem;
+  }
+
+  #otherBasket div ul li {
+    font-size: 0.78rem;
+  }
+
+  /* ---- Links — tab nav ---- */
+  #linksHeadings {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    padding: 0 12px;
+  }
+
+  #linksHeadings div {
+    width: 70% !important;
+    max-width: 70% !important;
+    flex: unset !important;
+    min-height: 36px;
+    min-width: unset;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  /* Link cards — full width, smaller corner radius on tiny screens */
+  #techBasketData a,
+  #socialBasketData a {
+    min-width: 90%;
+    border-top-left-radius: 12%;
+    border-bottom-right-radius: 12%;
+  }
+
+  /* ---- Contact — info cards ---- */
+  address a {
+    height: auto;
+    min-width: 90%;
+    width: 90%;
+    padding: 20px 12px;
+    margin: 8px auto;
+  }
+
+  /* ---- Contact — form ---- */
+  #contact-heading {
+    margin-top: 60px;
+  }
+
+  #messageForm {
+    padding: 0 12px 16px;
+  }
+
+  #messageDetails,
+  #messageBody {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  #messageDetails label,
+  #messageBody label {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+
+  #messageDetails div input {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    height: 38px;
+  }
+
+  #messageBody textarea {
+    font-size: 0.82rem;
+    rows: 4;
+    height: 120px;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  #msgsendbtn {
+    width: 60%;
+    margin: 12px auto 0;
+    display: block;
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* ---- Contact — info cards ---- */
+  #contactdetails {
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  #messageHeadingArea {
+    margin-top: 16px;
+  }
+  #messageHeading {
+    font-size: 0.95rem;
+  }
+
+  /* ---- Scroll-to-top button ---- */
+  #scrollbtn {
+    right: 15px;
+    bottom: 15px;
+  }
 }

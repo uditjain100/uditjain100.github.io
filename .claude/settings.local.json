@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pdftotext /Users/uditjain/Downloads/portfolio/Udit_Resume.pdf -)"
+      "Bash(pdftotext /Users/uditjain/Downloads/portfolio/Udit_Resume.pdf -)",
+      "Bash(sed -i '' 's/id=\"cdotRight\" class=\"card col-6\"/id=\"cdotRight\" class=\"card col-12 col-md-6\"/' index.html)",
+      "Bash(sed -i '' 's/id=\"infosysLeft\" class=\"card col-6\"/id=\"infosysLeft\" class=\"card col-12 col-md-6\"/' index.html)",
+      "Bash(sed -i '' 's/id=\"infosysRight\" class=\"card col-6\"/id=\"infosysRight\" class=\"card col-12 col-md-6\"/' index.html)",
+      "Bash(sed -i '' 's/id=\"postgraduationLeft\" class=\"card col-6\"/id=\"postgraduationLeft\" class=\"card col-12 col-md-6\"/' index.html)",
+      "Bash(sed -i '' 's/id=\"postgraduationRight\" class=\"card col-6\"/id=\"postgraduationRight\" class=\"card col-12 col-md-6\"/' index.html)"
     ]
   }
 }
