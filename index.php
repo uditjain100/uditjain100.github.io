@@ -1,5 +1,5 @@
 <?php
 
-include_once("boilerplate.html");
+include_once("index.html");
 
 ?>
