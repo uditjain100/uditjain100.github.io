@@ -733,6 +733,17 @@ img.rounded-pill {
   border-bottom: 0.2px black solid;
 }
 
+#intelLeft .card-body,
+#ciscoRight .card-body,
+#cdotLeft .card-body,
+#infosysRight .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 /* Consistent company name across all four experience entries */
 #intelLeft h2.card-title,
 #ciscoRight h2.card-title,
@@ -1654,6 +1665,7 @@ address a img {
     width: 100%;
     border: none;
     border-bottom: 1px solid #ccc;
+    text-align: center;
   }
 
   #aboutProfileImage {
@@ -1944,13 +1956,23 @@ address a img {
     font-size: 0.75rem;
     line-height: 1.6;
     padding-right: 0;
-    text-align: left;
+    text-align: center;
+  }
+  .project-section ul {
+    list-style: none;
+    padding-left: 0;
   }
   .project-section li {
     font-size: 0.75rem;
     line-height: 1.6;
     margin: 4px 0;
-    text-align: left;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+  }
+  .project-section li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
   .bold {
     font-size: 0.75rem;
@@ -2091,6 +2113,7 @@ address a img {
   #organiserDetails,
   #volunteerDetails {
     padding: 12px 10px;
+    text-align: center;
   }
 
   #volunteerDetails h2,
